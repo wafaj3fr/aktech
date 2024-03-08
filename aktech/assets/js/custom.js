@@ -580,3 +580,12 @@ $(".submitForm").on('click', function() {
         });
     }
 });
+
+const serviceCards = document.querySelectorAll('.accordion-card');
+
+serviceCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const details = card.querySelector('.service-details');
+    details.classList.toggle('show'); // Toggle visibility on click
+  });
+});

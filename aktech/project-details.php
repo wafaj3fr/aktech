@@ -150,8 +150,6 @@
             <div class="container">
             <div class="saf_heading">
                                 <h4>Our Clients |Partners</h4>
-                                <!-- <img clas="move" src="assets/images/index/heading_border_half.png" alt="" /> -->
-                                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inciunt ut labore et dolore magna aliqua ipsum dolor sit amet, consectetur adipisicing eliteised do eiusmod tempor incididunt ut labore et dolore.</p> -->
                             </div>
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-12">
@@ -171,56 +169,6 @@
                                  </div>
                                  <?php
 							}}?>
-                                 <!-- <div class="swiper-slide">
-                                    <div class="saf_partners_container text-center">
-                                       <a href="javascript:void(0);"><img src="http://via.placeholder.com/170x90" alt="partner" /></a>
-                                    </div>
-                                 </div>
-                                 <div class="swiper-slide">
-                                    <div class="saf_partners_container text-center">
-                                       <a href="javascript:void(0);"><img src="http://via.placeholder.com/170x90" alt="partner" /></a>
-                                    </div>
-                                 </div>
-                                 <div class="swiper-slide">
-                                    <div class="saf_partners_container text-center">
-                                       <a href="javascript:void(0);"><img src="http://via.placeholder.com/170x90" alt="partner" /></a>
-                                    </div>
-                                 </div>
-                                 <div class="swiper-slide">
-                                    <div class="saf_partners_container text-center">
-                                       <a href="javascript:void(0);"><img src="http://via.placeholder.com/170x90" alt="partner" /></a>
-                                    </div>
-                                 </div>
-                                 <div class="swiper-slide">
-                                    <div class="saf_partners_container text-center">
-                                       <a href="javascript:void(0);"><img src="http://via.placeholder.com/170x90" alt="partner" /></a>
-                                    </div>
-                                 </div>
-                                 <div class="swiper-slide">
-                                    <div class="saf_partners_container text-center">
-                                       <a href="javascript:void(0);"><img src="http://via.placeholder.com/170x90" alt="partner" /></a>
-                                    </div>
-                                 </div>
-                                 <div class="swiper-slide">
-                                    <div class="saf_partners_container text-center">
-                                       <a href="javascript:void(0);"><img src="http://via.placeholder.com/170x90" alt="partner" /></a>
-                                    </div>
-                                 </div>
-                                 <div class="swiper-slide">
-                                    <div class="saf_partners_container text-center">
-                                       <a href="javascript:void(0);"><img src="http://via.placeholder.com/170x90" alt="partner" /></a>
-                                    </div>
-                                 </div>
-                                 <div class="swiper-slide">
-                                    <div class="saf_partners_container text-center">
-                                       <a href="javascript:void(0);"><img src="http://via.placeholder.com/170x90" alt="partner" /></a>
-                                    </div>
-                                 </div>
-                                 <div class="swiper-slide">
-                                    <div class="saf_partners_container text-center">
-                                       <a href="javascript:void(0);"><img src="http://via.placeholder.com/170x90" alt="partner" /></a>
-                                    </div>
-                                 </div> -->
                               </div>
                         </div>
                     </div>

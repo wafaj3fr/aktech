@@ -75,218 +75,95 @@
       include("header.php");
       ?>
         <!--==========Header Banner Start==============-->
-        <div class="saf_pagetitle">
-            <div class="saf_img_overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="page_title">
-                            <h2>Services Detail</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <ul class="breadcrumb">
-                            <li><a href="index.php">home</a></li>
-                            <li>//</li>
-                            <li><a href="about.php">Services Detail</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <!--========Header Banner End===============-->
         <!-- Blog Start -->
-        <section class="saf_blog_wrapper">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="saf_blog_page_wrapper">
-                        <?PhP
+        <div class="container-fluid">
+  <?PhP
                             $id = 'Asset Integrity & Mechanical Inspection';
                             $sqlproject = "SELECT * FROM `services` WHERE `servicesName` = '$id'";
 
                             $prodect_project=$conn->query($sqlproject);
                             $row_project = $prodect_project->fetch_assoc();
-                        ?>
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div class="saf_blog_thumb">
-                                            <a href="#">
-                                                <h4 class="saf_blog_title saf_S_blog_title"><?php echo $row_project["servicesName"];?></h4>
-                                            </a>
-                                            <!-- <ul class="saf_blog_info">
-                                                <li>
-                                                    <a href="javascript:void(0);"><img src="assets/images/index/location.png" alt="" width="40" height="40"/><?php echo $row_project["Location"]; ?></a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);"><img src="assets/images/index/date.png" alt="" width="35" height="35"/><?php echo $row_project["Date"]; ?></a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);"><img src="assets/images/index/cmnt.png" alt="" />52</a>
-                                                </li>
-                                            </ul> -->
-                                        <!-- <a href="javascript:void(0);" class="saf_blog_img wow fadeInDown" data-wow-duration="1s">
-                                            <img src="http://via.placeholder.com/870x580" alt="" />
-                                        </a> -->
-                                        <div class="saf_single_blog_text2">
-                                                <?php echo $row_project["servicedet"];?>  </div>
-                                        <div class="blog_text wow fadeInLeft" data-wow-duration="1s">
-                                            
-                                        <!-- style=" text-align: center;" -->
-                                        <a class=""  onclick="myFunction()" id="myBtn"><div class="saf_author_message_box wow fadeInLeft" data-wow-duration="1s"><b><?php echo $row_project["servicedettitel"];?></b></div>
-                                        <span id="dots"></span>
-                                        <span id="more">
-                                        <p><?php echo $row_project["servicedet2"];?></p>
-                                        <span></p>
-
-                                        <a class=""  onclick="myFunctiont1()" id="myBtn1"><div class="saf_author_message_box wow fadeInLeft" data-wow-duration="1s"><b><?php echo $row_project["servicedettitel2"];?></b></div>
-                                        <span id="dots1"></span>
-                                        <span id="more1">
-                                        <p><?php echo $row_project["servicedet3"];?></p>
-                                        <span></p>
-                                        <!-- <b><?php echo $row_project["servicedettitel2"];?></b>
-                                        <p><?php echo $row_project["servicedet3"];?></p>
-                                         -->
-                                         <a class=""  onclick="myFunctiont2()" id="myBtn2"><div class="saf_author_message_box wow fadeInLeft" data-wow-duration="1s">  
-                                         <b><?php echo $row_project["servicedettitel4"];?></b></div>
-                                         <span id="dots2"></span>
-                                          <span id="more2">
-                                                <div class="saf_img_text_container">
-                                                    <img src="assets/images/index/AssetIntegrity.png" alt="security">
-                                                    <p>
-                                                    <?php echo $row_project["servicedet4"];?>
-                                                    <span></p>
-                                                        <!-- <br> -->
-                                                         <!-- <?php echo $row_project["servicedet5"];?> -->
-                                                    </p>
-                                                </div>
-                                                <a class=""  onclick="myFunctiont3()" id="myBtn3"><div class="saf_author_message_box wow fadeInLeft" data-wow-duration="1s">  
-                                                <b><?php echo $row_project["servicedettitel5"];?></b> </div>
-                                                <span id="dots3"></span>
-                                                <span id="more3">
-                                                    <?php echo $row_project["servicedet5"];?>
-                                                    <span></p>
-                                                <a class=""  onclick="myFunctiont4()" id="myBtn4"><div class="saf_author_message_box wow fadeInLeft" data-wow-duration="1s">
-                                                <b><?php echo $row_project["servicedettitel6"];?></b> </div>
-                                                <span id="dots4"></span>
-                                                <span id="more4">
-                                                <p> <?php echo $row_project["servicedet6"];?></p>
-                                                
-
-
-                                                <b><?php echo $row_project["servicedettitel7"];?></b> <br>
-
-                                                <p> <?php echo $row_project["servicedet7"];?></p>
-                                                <ul style="padding: 20px;">
-                                                <li class="me">Developing WPS, WQT, PQR for New Construction and In-service Pipeline by Certified Welding Engineer. IWE and CSWIP 3.1</li>
-                                                <li class="me">Advanced NDT Service: AE, PAUT, TOFD and Long Guided Waves.</li>
-                                                <li class="me">Tanks and Vessels Inspections as per API 653 by API Certified Inspector.</li>
-                                                <li class="me">Piping System Inspection as per API 507 by API Certified Inspector.</li>
-                                                
-                                                <!-- <li>Milk</li> -->
-                                                </ul><span></p>
-
-                                                <p> <?php echo $row_project["servicedet8"];?></p>
-                                                    
-                                                <!-- <p> <?php echo $row_project["servicedet7"];?></p> -->
-                                                <br>
-                                                <!-- <p> <?php echo $row_project["servicedet8"];?></p> -->
-                                                <!-- <br> -->
-                                                <!-- <p> <?php echo $row_project["servicedet9"];?></p> -->
-                                            </div>
-                                            <!-- <div class="saf_author_message_box wow fadeInLeft" data-wow-duration="1s"> -->
-                                                <!-- <div class="saf_author_image">
-                                                    <img src="http://via.placeholder.com/110x110" alt="image">
-                                                </div> -->
-                                                <!-- <div class="saf_author_content">
-                                                    <h5>Admin - <span>David Parker</span></h5>
-                                                    <p><?php echo $row_project["servicedet9"];?> </p>
-                                                </div> -->
-                                            <!-- </div> -->
-
-
-                                            <!-- <div class="saf_comment_box">
-                                                <h4 class="saf_section_heading">Comments</h4>
-                                                <div class="saf_comment_holder wow fadeInLeft" data-wow-duration="1s">
-                                                    <div class="saf_comment_user">
-                                                        <a href="javascript:void(0);"><img src="http://via.placeholder.com/110x110" alt="image"></a>
-                                                    </div>
-                                                    <div class="saf_comment_detail">
-                                                        <h5 class="saf_user_name">Koyica Doe</h5>
-                                                        <p class="saf_comment_date">September 21, 2020<a class="saf_reply_btn" href="javascript:void(0);"><span>
-                                                      </span>
-                                                      <i class="fa fa-long-arrow-left"></i> Reply</a>
-                                                        </p>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididuut labore et dolore mereagna aliqua. Ut enim ad minim veniam, quis nos ex ea commodo conresequat Duis aute
-                                                            irure dolor veniam, quis nostrud exercitation.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="saf_comment_holder saf_comment_holder2 wow fadeInLeft" data-wow-duration="1s">
-                                                    <div class="saf_comment_user">
-                                                        <a href="javascript:void(0);"><img src="http://via.placeholder.com/110x110" alt="image"></a>
-                                                    </div>
-                                                    <div class="saf_comment_detail">
-                                                        <h5 class="saf_user_name">Koyica Doe</h5>
-                                                        <p class="saf_comment_date">September 21, 2020<a class="saf_reply_btn" href="javascript:void(0);"><span>
-                                                      </span>
-                                                      <i class="fa fa-long-arrow-left"></i> Reply</a>
-                                                        </p>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididuut labore et dolore mereagna aliqua. Ut enim ad minim veniam, quis nos ex ea commodo conresequat Duis aute
-                                                            irure dolor veniam, quis nostrud exercitation.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="saf_comment_holder wow fadeInLeft" data-wow-duration="1s">
-                                                    <div class="saf_comment_user">
-                                                        <a href="javascript:void(0);"><img src="http://via.placeholder.com/110x110" alt="image"></a>
-                                                    </div>
-                                                    <div class="saf_comment_detail">
-                                                        <h5 class="saf_user_name">Koyica Doe</h5>
-                                                        <p class="saf_comment_date">September 21, 2020<a class="saf_reply_btn" href="javascript:void(0);"><span>
-                                                      </span>
-                                                      <i class="fa fa-long-arrow-left"></i> Reply</a>
-                                                        </p>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididuut labore et dolore mereagna aliqua. Ut enim ad minim veniam, quis nos ex ea commodo conresequat Duis aute
-                                                            irure dolor veniam, quis nostrud exercitation.</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                            <!-- <div class="saf_comment_form wow fadeInLeft" data-wow-duration="1s">
-                                                <div class="saf_comment_form_heading">
-                                                    <h3>Leave A Comment</h3>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                        <div class="saf_field_holder">
-                                                            <input type="text" class="saf_form_field" placeholder="Enter Your Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                        <div class="saf_field_holder">
-                                                            <input type="text" class="saf_form_field" placeholder="Enter Your Email">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                                                        <div class="saf_field_holder">
-                                                            <textarea placeholder="Enter Your Message..." class="saf_form_field"></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                                                        <div class="saf_blog_btn saf_main_btn">
-                                                            <a href="javascript:void(0);" class="saf_btn">Submit</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                               
-                            </div>
-                        </div>
+                            
+                            ?>
+        <h1 class="text-center mt-5 display-3 fw-bold" style="margin:15px;"><span class="theme-text">Asset Integrity </span><br>
+         & Mechanical Inspection</h1>
+        <hr class="mx-auto mb-5 w-25">
+        <p class="text-center mb-5"><?php echo $row_project["servicedet"];?></p>
+        <div class="row mb-5">
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <!-- card starts here -->
+                <div class="ser-card shadow">
+                    <img src="./assets/images/index/monitor.svg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="text-center">Assessment and Evaluation</h3>
+                        <hr class="mx-auto w-75">
+                        <p><?php echo $row_project["servicedet2"];?></p>
                     </div>
                 </div>
+                <!-- card ends here -->
             </div>
-        </section>
+            <!-- col ends here -->
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <!-- card starts here -->
+                <div class="ser-card shadow">
+                <img src="./assets/images/index/problem_solving.svg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="text-center">Risk-Based Inspection (RBI)</h3>
+                        <hr class="mx-auto w-75">
+                        <p><?php echo $row_project["servicedet3"];?></p>
+                    </div>
+                </div>
+                <!-- card ends here -->
+            </div>
+            <!-- col ends here -->
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <!-- card starts here -->
+                <div class="ser-card shadow">
+                    <img src="./assets/images/index/fitting_pie.svg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="text-center">Fitness-for-Service Assessment</h3>
+                        <hr class="mx-auto w-75">
+                        <p> <?php echo $row_project["servicedet4"];?></p>
+                    </div>
+                </div>
+                <!-- card ends here -->
+            </div>
+            <!-- col ends here -->
+            
+        </div>
+        <div class="row mb-5">
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <!-- card starts here -->
+                <div class="ser-card shadow">
+                    <img src="./assets/images/index/financial_data.svg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="text-center">Pipeline Integrity Management</h3>
+                        <hr class="mx-auto w-75">
+                        <p><?php echo $row_project["servicedet5"];?></p>
+                    </div>
+                </div>
+                <!-- card ends here -->
+            </div>
+            <!-- col ends here -->
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <!-- card starts here -->
+                <div class="ser-card shadow">
+                <img src="./assets/images/index/repair.svg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="text-center">Mechanical Inspection Services</h3>
+                        <hr class="mx-auto w-75">
+                        <p><?php echo $row_project["servicedet6"];?></p>
+                    </div>
+                </div>
+                <!-- card ends here -->
+            </div>
+            <!-- col ends here -->
+            
+            
+        </div>
+</div>
     </div>
     <!-- Partner Start -->
     <div class="saf_partner_wrapper">

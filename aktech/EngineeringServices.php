@@ -75,296 +75,152 @@
         <?php
       include("header.php");
       ?>
-        <!--==========Header Banner Start==============-->
-        <div class="saf_pagetitle">
-            <div class="saf_img_overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="page_title">
-                            <h2>Services Detail</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <ul class="breadcrumb">
-                            <li><a href="index.php">home</a></li>
-                            <li>//</li>
-                            <li><a href="about.php">Services Detail</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--========Header Banner End===============-->
-        <!-- Blog Start -->
-        <section class="saf_blog_wrapper">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="saf_blog_page_wrapper">
-                        <?PhP
+
+      
+
+<div class="container-fluid">
+  <?PhP
                             $id = 'Engineering Services';
                             $sqlproject = "SELECT * FROM `services` WHERE `servicesName` = '$id'";
 
                             $prodect_project=$conn->query($sqlproject);
                             $row_project = $prodect_project->fetch_assoc();
-                        ?>
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div class="saf_blog_thumb">
-                                            <a href="#">
-                                                <h4 class="saf_blog_title saf_S_blog_title"><?php echo $row_project["servicesName"];?></h4>
-                                            </a>
-                                            <!-- <ul class="saf_blog_info">
-                                                <li>
-                                                    <a href="javascript:void(0);"><img src="assets/images/index/location.png" alt="" width="40" height="40"/><?php echo $row_project["Location"]; ?></a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);"><img src="assets/images/index/date.png" alt="" width="35" height="35"/><?php echo $row_project["Date"]; ?></a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);"><img src="assets/images/index/cmnt.png" alt="" />52</a>
-                                                </li>
-                                            </ul> -->
-                                        <!-- <a href="javascript:void(0);" class="saf_blog_img wow fadeInDown" data-wow-duration="1s">
-                                            <img src="http://via.placeholder.com/870x580" alt="" />
-                                        </a> -->
-                                        <div class="saf_single_blog_text2">
-                                                <?php echo $row_project["servicedet2"];?>  </div>
-                                        <div class="blog_text wow fadeInLeft" data-wow-duration="1s">
-                                            
-                                        <!-- style=" text-align: center;" -->
-                                        <!-- <b><?php echo $row_project["servicedettitel"];?></b> -->
-                                        <a class=""  onclick="myFunction()" id="myBtn"><div class="saf_author_message_box wow fadeInLeft" data-wow-duration="1s"><?php echo $row_project["servicedettitel"];?></div></a>
+                            
+                            ?>
 
-                                        <span id="dots"></span>
-                                        <span id="more">
-                                        <p><?php echo $row_project["servicedet"];?></p>
-                                            <ul style="padding: 20px;">
-                                            <li class="me"> Conceptual Design.</li>
-                                            <li class="me"> Feasibility Study.</li>
-                                            <li class="me"> Process Design.</li>
-                                            <li class="me"> Basic Engineering.</li>
-                                            <li class="me"> PFD & P&ID Development.</li>
-                                            <li class="me"> Heat and Material Balance “HMB”.</li>
-                                            <li class="me"> Conceptual Layouts.</li>
-                                            <li class="me"> Operation and Control Philosophy</li>
-                                            <!-- <li>Milk</li> -->
-                                             </ul>
-                                             </span></p>
-                                                <!-- <button onclick="myFunction()" id="myBtn">Read more</button> -->
-                                          
-                                            <!-- <div class="saf_single_blog_text wow fadeInLeft" data-wow-duration="1s"> -->
-                                            <a class=""  onclick="myFunctiont1()" id="myBtn1"><div class="saf_author_message_box wow fadeInLeft" data-wow-duration="1s"><?php echo$row_project["servicedettitel2"];?></div></a>
-                                            <span id="dots1"></span><span id="more1">
-                                                <p><?php echo $row_project["servicedet4"];?></p>
-                                                <!-- <p> <?php echo $row_project["servicedet3"];?></p> -->
-                                                <!-- <p><?php echo $row_project["servicedet"];?></p> -->
-                                            <ul style="padding: 20px;">
-                                            <li class="me">   Definition, selection and sizing of main equipment.</li>
-                                            <li class="me">   Producing main equipment data sheets and specifications.</li>
-                                            <li class="me">   Development of process piping and instrumentation diagrams “P&IDs”.</li>
-                                            <li class="me">   Development of utilities piping and instrumentation diagrams “P&IDs”.</li>
-                                            <li class="me">   Development of detailed plot plans.</li>
-                                            <li class="me">   Elaboration of the main piping, instrumentation, electrical and civil works layouts.</li>
-                                            <!-- <li>Milk</li> -->
-                                             </ul></span></p>
-                                             <a class=""  onclick="myFunctiont2()" id="myBtn2"><b><div class="saf_author_message_box wow fadeInLeft" data-wow-duration="1s"><?php echo $row_project["servicedettitel4"];?></b></div></a>
-                                            <span id="dots2"></span><span id="more2">
-                                                <div class="saf_img_text_container">
-                                                    <img src="assets/images/index/se.png" alt="security">
-                                               
-                                                    
-                                            <p>
-                                            
-                                            <?php echo $row_project["servicedet4"];?>
-                                                <br>
-                                                    <!-- <?php echo $row_project["servicedet5"];?> -->
-                                                    
-                                            </p>
-                                                </div></span></p>
-                                                <a class=""  onclick="myFunctiont3()" id="myBtn3"><div class="saf_author_message_box wow fadeInLeft" data-wow-duration="1s"><b><?php echo $row_project["servicedettitel5"];?></b></div></a> 
-                                                <span id="dots3"></span><span id="more3">
-                                                <p> <?php echo $row_project["servicedet5"];?></p>
-                                                <ul style="padding: 20px;">
-                                                <li class="me"> Process Design Basis</li>
-                                                <li class="me"> Process flow diagrams</li>
-                                                <li class="me"> Piping and instrumentation diagrams</li>
-                                                <li class="me"> Process design calculations and equipment sizing</li>
-                                                <li class="me"> Operation and control philosophy</li>
-                                                <li class="me"> Commissioning Manuals</li>
-                                                <!-- <li>Milk</li> -->
-                                                </ul></span></p>
-                                                <a class=""  onclick="myFunctiont4()" id="myBtn4"><div class="saf_author_message_box wow fadeInLeft" data-wow-duration="1s"><b><?php echo $row_project["servicedettitel6"];?></b></div></a>  
-                                                <span id="dots4"></span><span id="more4">
-                                                <p> <?php echo $row_project["servicedet6"];?></p>
-                                                </span></p>
-                                                <a class=""  onclick="myFunctiont5()" id="myBtn5"><div class="saf_author_message_box wow fadeInLeft" data-wow-duration="1s"><b><?php echo $row_project["servicedettitel7"];?></b></div></a> 
-                                                <span id="dots5"></span><span id="more5">
-                                                    <p> <?php echo $row_project["servicedet7"];?></p>
-                                                    <ul style="padding: 20px;">
-                                                <li class="me"> Authorization for Expenditure (AFE) & Total Installed Cost (TIC) Estimating.</li>
-                                                <li class="me"> Preparation of equipment and piping layouts, general arrangements.</li>
-                                                <li class="me"> Rotating Equipment Design /selection.</li>
-                                                <li class="me"> Vessels & Tanks Design/Specifications (AME TANK. PV ELITE, etc.).</li>
-                                               
-                                                <!-- <li>Milk</li> -->
-                                                </ul></span></p>
-
-                                                <a class=""  onclick="myFunctiont6()" id="myBtn6"><div class="saf_author_message_box wow fadeInLeft" data-wow-duration="1s"><b><?php echo $row_project["servicedettitel8"];?></b></div></a> 
-                                                <span id="dots6"></span><span id="more6">
-                                                <p> <?php echo $row_project["servicedet8"];?></p>
-                                                <ul style="padding: 20px;">
-                                                <li class="me"> Hydraulic Analysis.</li>
-                                                <li class="me"> Relief System Analysis</li>
-                                                <li class="me"> Installed Cost (TIC) Estimating.</li>
-                                                <li class="me"> Piping/Pipelines Design Calculations</li>
-                                                <li class="me"> Authorization for Expenditure (AFE) & Total</li>
-                                                <li class="me"> Specifications / Drawings/ Isometrics /MTOs.</li>
-                                                <li class="me"> Piping Flexibility / Stress Analysis (Caesar II/AUTOPIPE)</li>
-                                                <li class="me"> Including process & utilities piping, & firefighting ring design.</li>
-                                                <li class="me"> Preparation of equipment and piping layouts, general arrangements.</li>
-                                                
-                                                
-
-                                                <!-- <li>Milk</li> -->
-                                                </ul></span></p>
-
-                                                <a class=""  onclick="myFunctiont7()" id="myBtn7"><div class="saf_author_message_box wow fadeInLeft" data-wow-duration="1s"><b><?php echo $row_project["servicedettitel9"];?></b></div></a> 
-                                                <span id="dots7"></span><span id="more7">
-                                                <p> <?php echo $row_project["servicedet9"];?></p>
-                                                <ul style="padding: 20px;">
-                                                <li class="me"> Power System Modelling and Studies “ETAP”.</li>
-                                                <li class="me"> Medium and Low Voltage power distribution system design</li>
-                                                <li class="me"> Single line/schematic diagrams</li>
-                                                <li class="me"> Grounding & Lightning protection system design.</li>
-                                                <li class="me"> Cabling system design, sizing and layout.</li>
-                                                <li class="me"> Lighting System design.</li>
-                                                <li class="me"> Heat tracing systems</li>
-                                                <li class="me"> Protection coordination study.</li>
-                                                <li class="me"> Motor Control and Switchgear Design.</li>
-                                                <li class="me"> Overhead transmission lines design</li>
-                                                <li class="me"> Uninterruptible Power Supply (UPS) design.</li>
-                                                <li class="me"> Electrical Equipment specifications & datasheets</li>
-                                                <!-- <li class="me">Hydrauli</li> -->
-                                                <!-- <li>Milk</li> -->
-                                                </ul></span></p>
-
-                                                <a class=""  onclick="myFunctiont8()" id="myBtn8"><div class="saf_author_message_box wow fadeInLeft" data-wow-duration="1s"><b><?php echo $row_project["servicedettitel10"];?></b></div></a> 
-                                                <span id="dots8"></span><span id="more8">
-                                                <p> <?php echo $row_project["servicedet10"];?></p>
-                                                <ul style="padding: 20px;">
-                                                <li class="me"> Operation and control philosophies, </li>
-                                                <li class="me"> Block diagrams, </li>
-                                                <li class="me"> Wiring schematics & </li>
-                                                <li class="me"> Hook-up drawings, </li>
-                                                <li class="me"> Instrumentations specifications, </li>
-                                                <li class="me"> Loop diagrams, </li>
-                                                <li class="me"> Instrument’s locations layout.</li>
-                                                <li class="me"> PLC programming, SCADA integration.</li>
-                                                <li class="me"> Interface development</li>
-                                                <li class="me"> Instrument cabling design</li>
-                                                <!-- <li>Milk</li> -->
-                                                </ul></span></p>
-                                                <!-- <p> <?php echo $row_project["servicedet7"];?></p> -->
-                                                <br>
-                                                <!-- <p> <?php echo $row_project["servicedet8"];?></p> -->
-                                                <!-- <br> -->
-                                                <!-- <p> <?php echo $row_project["servicedet9"];?></p> -->
-                                            </div>
-                                            <!-- <div class="saf_author_message_box wow fadeInLeft" data-wow-duration="1s"> -->
-                                                <!-- <div class="saf_author_image">
-                                                    <img src="http://via.placeholder.com/110x110" alt="image">
-                                                </div> -->
-                                                <!-- <div class="saf_author_content">
-                                                    <h5>Admin - <span>David Parker</span></h5>
-                                                    <p><?php echo $row_project["servicedet9"];?> </p>
-                                                </div> -->
-                                            <!-- </div> -->
-
-
-                                            <!-- <div class="saf_comment_box">
-                                                <h4 class="saf_section_heading">Comments</h4>
-                                                <div class="saf_comment_holder wow fadeInLeft" data-wow-duration="1s">
-                                                    <div class="saf_comment_user">
-                                                        <a href="javascript:void(0);"><img src="http://via.placeholder.com/110x110" alt="image"></a>
-                                                    </div>
-                                                    <div class="saf_comment_detail">
-                                                        <h5 class="saf_user_name">Koyica Doe</h5>
-                                                        <p class="saf_comment_date">September 21, 2020<a class="saf_reply_btn" href="javascript:void(0);"><span>
-                                                      </span>
-                                                      <i class="fa fa-long-arrow-left"></i> Reply</a>
-                                                        </p>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididuut labore et dolore mereagna aliqua. Ut enim ad minim veniam, quis nos ex ea commodo conresequat Duis aute
-                                                            irure dolor veniam, quis nostrud exercitation.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="saf_comment_holder saf_comment_holder2 wow fadeInLeft" data-wow-duration="1s">
-                                                    <div class="saf_comment_user">
-                                                        <a href="javascript:void(0);"><img src="http://via.placeholder.com/110x110" alt="image"></a>
-                                                    </div>
-                                                    <div class="saf_comment_detail">
-                                                        <h5 class="saf_user_name">Koyica Doe</h5>
-                                                        <p class="saf_comment_date">September 21, 2020<a class="saf_reply_btn" href="javascript:void(0);"><span>
-                                                      </span>
-                                                      <i class="fa fa-long-arrow-left"></i> Reply</a>
-                                                        </p>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididuut labore et dolore mereagna aliqua. Ut enim ad minim veniam, quis nos ex ea commodo conresequat Duis aute
-                                                            irure dolor veniam, quis nostrud exercitation.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="saf_comment_holder wow fadeInLeft" data-wow-duration="1s">
-                                                    <div class="saf_comment_user">
-                                                        <a href="javascript:void(0);"><img src="http://via.placeholder.com/110x110" alt="image"></a>
-                                                    </div>
-                                                    <div class="saf_comment_detail">
-                                                        <h5 class="saf_user_name">Koyica Doe</h5>
-                                                        <p class="saf_comment_date">September 21, 2020<a class="saf_reply_btn" href="javascript:void(0);"><span>
-                                                      </span>
-                                                      <i class="fa fa-long-arrow-left"></i> Reply</a>
-                                                        </p>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididuut labore et dolore mereagna aliqua. Ut enim ad minim veniam, quis nos ex ea commodo conresequat Duis aute
-                                                            irure dolor veniam, quis nostrud exercitation.</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                            <!-- <div class="saf_comment_form wow fadeInLeft" data-wow-duration="1s">
-                                                <div class="saf_comment_form_heading">
-                                                    <h3>Leave A Comment</h3>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                        <div class="saf_field_holder">
-                                                            <input type="text" class="saf_form_field" placeholder="Enter Your Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                        <div class="saf_field_holder">
-                                                            <input type="text" class="saf_form_field" placeholder="Enter Your Email">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                                                        <div class="saf_field_holder">
-                                                            <textarea placeholder="Enter Your Message..." class="saf_form_field"></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                                                        <div class="saf_blog_btn saf_main_btn">
-                                                            <a href="javascript:void(0);" class="saf_btn">Submit</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                               
-                            </div>
-                        </div>
+        <h1 class="text-center mt-5 display-3 fw-bold" style="margin:15px;"><span class="theme-text">Engineering </span>Services</h1>
+        <hr class="mx-auto mb-5 w-25">
+        <p class="text-center mb-5"><?php echo $row_project["servicedet"];?></p>
+        <div class="row mb-5">
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <!-- card starts here -->
+                <div class="ser-card shadow">
+                    <img src="./assets/images/index/cost1.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="text-center"><?php echo $row_project["servicedettitel"];?></h3>
+                        <hr class="mx-auto w-75">
+                        <p><?php echo $row_project["servicedet"];?></p>
                     </div>
                 </div>
+                <!-- card ends here -->
             </div>
-        </section>
+            <!-- col ends here -->
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <!-- card starts here -->
+                <div class="ser-card shadow">
+                <img src="./assets/images/index/Allura - Work From home.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="text-center"><?php echo $row_project["servicedettitel2"];?></h3>
+                        <hr class="mx-auto w-75">
+                        <p> <?php echo $row_project["servicedet3"];?></p>
+                    </div>
+                </div>
+                <!-- card ends here -->
+            </div>
+            <!-- col ends here -->
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <!-- card starts here -->
+                <div class="ser-card shadow">
+                    <img src="./assets/images/index/Allura - Exploring on Laptop.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="text-center"><?php echo $row_project["servicedettitel4"];?></h3>
+                        <hr class="mx-auto w-75">
+                        <p> <?php echo $row_project["servicedet4"];?></p>
+                    </div>
+                </div>
+                <!-- card ends here -->
+            </div>
+            <!-- col ends here -->
+            
+        </div>
+        <div class="row mb-5">
+        <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <!-- card starts here -->
+                <div class="ser-card shadow">
+                <img src="./assets/images/index/Allura - Chilling.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="text-center"><?php echo $row_project["servicedettitel5"];?></h3>
+                        <hr class="mx-auto w-75">
+                        <p><?php echo $row_project["servicedet5"];?></p>
+                    </div>
+                </div>
+                <!-- card ends here -->
+            </div>
+            <!-- col ends here -->
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <!-- card starts here -->
+                <div class="ser-card shadow">
+                <img src="./assets/images/index/cost1.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="text-center"><?php echo $row_project["servicedettitel6"];?></h3>
+                        <hr class="mx-auto w-75">
+                        <p> <?php echo $row_project["servicedet6"];?></p>
+                    </div>
+                </div>
+                <!-- card ends here -->
+            </div>
+            <!-- col ends here -->
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <!-- card starts here -->
+                <div class="ser-card shadow">
+                <img src="./assets/images/index/scope.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="text-center"><?php echo $row_project["servicedettitel7"];?></h3>
+                        <hr class="mx-auto w-75">
+                        <p> <?php echo $row_project["servicedet7"];?></p>
+                    </div>
+                </div>
+                <!-- card ends here -->
+            </div>
+            <!-- col ends here -->
+            
+            
+
+        </div>
+        <div class="row mb-5">
+        <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <!-- card starts here -->
+                <div class="ser-card shadow">
+                    <img src="./assets/images/index/risk1.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="text-center"><?php echo $row_project["servicedettitel8"];?></h3>
+                        <hr class="mx-auto w-75">
+                        <p> <?php echo $row_project["servicedet8"];?></p>
+                    </div>
+                </div>
+              
+                <!-- card ends here -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <!-- card starts here -->
+                <div class="ser-card shadow">
+                <img src="./assets/images/index/cost1.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="text-center"><?php echo $row_project["servicedettitel9"];?></h3>
+                        <hr class="mx-auto w-75">
+                        <p> <?php echo $row_project["servicedet9"];?></p>
+                    </div>
+                </div>
+                <!-- card ends here -->
+            </div>
+            <!-- col ends here -->
+            <div class="col-12 col-sm-6 col-md-3 m-auto">
+                <!-- card starts here -->
+                <div class="ser-card shadow">
+                <img src="./assets/images/index/scope.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="text-center"><?php echo $row_project["servicedettitel10"];?></h3>
+                        <hr class="mx-auto w-75">
+                        <p> <?php echo $row_project["servicedet10"];?></p>
+                    </div>
+                </div>
+                <!-- card ends here -->
+            </div>
+            <!-- col ends here -->
+
+        </div>
+    </div>
+
     </div>
     <!-- Partner Start -->
     <div class="saf_partner_wrapper">

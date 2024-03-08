@@ -1,3 +1,4 @@
+
 /*--------------------- Copyright (c) 2020 ----------------------- 
 [Master Stylesheet] 
 Project: Multifarious GYM
@@ -30,6 +31,8 @@ Author: Kamleshyadav
 1. Global CSS Start
 ********************************************************/
 
+
+
 /* Me */
 .me {
     list-style-image: url('88202951.png');
@@ -43,6 +46,13 @@ Author: Kamleshyadav
     height: 1;
   } */
 /* Me */
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+} */
 
 body {
     color: var(--main-txt-color);
@@ -780,31 +790,14 @@ header {
 .saf_services_wrapper {
     padding: 72px 0 50px;
     background: var(--main-bg-color);
-    /* background-image: url(pastedimage.png); */
-
 }
 .saf_services_wrapperServices {
-    /* padding: 72px 0 50px; */
-    /* background: var(); */
-    background-image: url(2001.i109.035_stem_education_isometric_concept_icons-05.jpg);
-    /* The image used */
-  /* background-image: url("img_girl.jpg"); */
-
-  /* Full height */
   height: 100%; 
-
+  background: none;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-    /* height: 100%; */
-    /* margin: 0; */
-    /* background-position: center; */
-  /* background-image: url("Logo-4.png"); */
-   /* background-repeat: no-repeat; */
-
-
-
 }
 
 .saf_services_sectionBg {
@@ -1947,6 +1940,148 @@ img.footer_logo {
     background-repeat: no-repeat;
     margin-bottom: 1px;
 }
+
+    /*   cards in service   */
+
+.card:hover, .card:focus {
+    transform: scale(3.1); /* Increase size by 10% on hover/focus */
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  #card-popup-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;  /* Initially hidden */
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;  /* Center content vertically */
+    background-color: rgba(0, 0, 0, 0.5);  /* Optional: Semi-transparent black background */
+    z-index: 10;  /* Ensure the wrapper is on top of other elements */
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* service new section */
+
+  .service { background-color: var(--snow); }
+
+  .service .section-text { margin-block-end: 20px; }
+  
+  .service-card {
+    background-color: var(--white);
+    padding: 50px 30px;
+    border-radius: var(--radius-4);
+    box-shadow: var(--shadow-2);
+  }
+  
+  .service-card .card-title {
+    margin-block: 35px 20px;
+    transition: var(--transition-1);
+  }
+  
+  .service-card .card-title:is(:hover, :focus) { color: var(--sefety-orange); }
+  
+  .service .shape-2 { display: none; }
+  
+  .service .shape-1 {
+    bottom: 0;
+    left: -50px;
+  }
+
+  /* another new section */
+ 
+  /* ======================================== */
+
+  /*one more*/
+
+  .theme-text {
+    color: #1961ac;
+  }
+  
+  .card-img-top {
+    height: 200px;
+    width: 100%;
+  }
+  .container-fluid .ser-card {
+    z-index: 1;
+    overflow: hidden;
+    transition: background-color 0.5s;
+    text-align: center;
+    padding-top: 10px;
+  }
+.container-fluid  .ser-card:hover {
+    background-color: #1961ac;
+    color: white;
+    cursor: pointer;
+  }
+
+  .container-fluid p.mb-5{
+    padding: 0 150px;
+  }
+  .ser-card:hover h3{
+    color: #fff;
+  }
+
+  .ser-card p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+.card-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.display-3{
+    top: 25px;
+}
+
+.ser-card:hover p {
+    -webkit-line-clamp: unset;
+}
+
+.container-fluid  .ser-card::before {
+    content: "";
+    left: -100%;
+    top: 0%;
+    background: #1961ac;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    z-index: -1;
+  }
+.container-fluid  .ser-card:hover::before {
+    left: 0%;  /* Existing style */
+  width: 100%;  /* Keep full width */
+  height: 100%;  /* Keep full height */
+  /* Added property */
+  transform: scale(1);  /* Reset scale to 1 */
+    color: white;
+  }
+  .container-fluid {
+    background-image: url("blob-scene-haikei.svg");
+    background-position: center;
+    /* background-size: cover; */
+  }
+
+  .saf_services_sectionBg .ser-card{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0 20px;
+  }
+
+/* ========================================= */
+
 .page_title h2 {
     float: left;
     width: 100%;
@@ -3128,5 +3263,11 @@ textarea.saf_form_field {
     .saf_author_content {
         width: 100%;
         padding-top: 15px;
+    }
+    .container-fluid p.mb-5{
+        padding: 0 10px;
+      }
+    .container-fluid .ser-card{
+        padding: 5px 10px;
     }
 }
