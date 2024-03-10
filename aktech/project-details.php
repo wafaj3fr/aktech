@@ -62,28 +62,6 @@
         <?php
       include("header.php");
       ?>
-        <!--==========Header Banner Start==============-->
-        <div class="saf_pagetitle">
-            <div class="saf_img_overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="page_title">
-                            <h2>Project Detail</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <ul class="breadcrumb">
-                            <li><a href="index.php">home</a></li>
-                            <li>//</li>
-                            <li><a href="about.php">Project Detail</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--========Header Banner End===============-->
-
         <!-- Blog Start -->
         <section class="saf_blog_wrapper">
             <div class="container">
@@ -100,9 +78,9 @@
                         ?>
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div class="saf_blog_thumb">
+                                    <div class="saf_blog_thumb text-center">
                                             <a href="#">
-                                                <h4 class="saf_blog_title saf_S_blog_title"><?php echo $row_project["prodectname"];?></h4>
+                                                <h4 class="saf_blog_title saf_S_blog_title"><?php echo $row_project["prodecttype"];?></h4>
                                             </a>
                                             <ul class="saf_blog_info">
                                                 <li>
@@ -112,27 +90,21 @@
                                                     <a href=""><img src="assets/images/index/date.png" alt="" width="35" height="35"/><?php echo $row_project["Date"]; ?></a>
                                                 </li>
                                             </ul>
-                                        <div class="blog_text wow fadeInLeft" data-wow-duration="1s">
-                                            <b>Scope of Work</b>
-                                            <p><?php echo $row_project["prodecttype"];?></p>
-                                                <!-- <img src='<?php echo $row_project["productsimg1"];?>' alt="">
-                                                <img src='<?php echo $row_project["productsimg2"];?>' alt="">
-                                                <img src='<?php echo $row_project["productsimg3"];?>' alt="">
-                                                <img src='<?php echo $row_project["productsimg4"];?>' alt="">
-                                                <img class="mySlides" src="img_forest.jpg" style="width:100%"> -->
+                                            <div class="blog_text wow fadeInLeft" data-wow-duration="1s">
+                                                <b>Scope of Work</b>
+                                                <p><?php echo $row_project["scope"];?></p>
                                                 <br>
-                                            
-                                                    <div class="w3-content w3-display-container">
-                                                    <img class="mySlides" src='<?php echo $row_project["productsimg1"];?>' style="width:100%">
-                                                    <!-- <img class="mySlides" src='<?php echo $row_project["productsimg2"];?>' style="width:100%"> -->
-                                                    <img class="mySlides" src='<?php echo $row_project["productsimg3"];?>' style="width:100%">
-                                                    <!-- <img class="mySlides" src='<?php echo $row_project["productsimg4"];?>' style="width:100%"> -->
-                                                  
+                                                <div class="w3-content">
+                                                    <img class="mySlides" src='<?php echo $row_project["productsimg1"]; ?>' style="max-width: 100%; height: auto;">
+                                                    <img class="mySlides" src='<?php echo $row_project["productsimg2"]; ?>' style="max-width: 100%; height: auto;">
+                                                    <img class="mySlides" src='<?php echo $row_project["productsimg3"]; ?>' style="max-width: 100%; height: auto;">
+                                                    <img class="mySlides" src='<?php echo $row_project["productsimg4"]; ?>' style="max-width: 100%; height: auto;">
+                                                
+                                                    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                                                    <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                                                </div>
+                                            </div>
 
-                                                    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-                                                    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-                                                    </div>
-                                        </div>
                                     </div>
                                 </div>
                                
@@ -148,28 +120,28 @@
 
     <div class="saf_partner_wrapper">
             <div class="container">
-            <div class="saf_heading">
-                                <h4>Our Clients |Partners</h4>
-                            </div>
+                <div class="saf_heading">
+                    <h4>Our Clients |Partners</h4>
+                </div>
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="partner_slider swiper-container">
                             <div class="swiper-wrapper">
                             <?php
-                     $sqlselectservice = "SELECT * FROM `clients`" ;
-                     $result_service = mysqli_query($conn, $sqlselectservice);
-                     if ($result_service->num_rows > 0) {
-                        while($row_service = $result_service->fetch_assoc()) {
-                     
-                    ?>
-                                 <div class="swiper-slide">
-                                    <div class="saf_partners_container text-center">
-                                       <a href="javascript:void(0);"><img src='<?php echo $row_service["img"];?>' alt="partner" /></a>
-                                    </div>
-                                 </div>
-                                 <?php
-							}}?>
-                              </div>
+                        $sqlselectservice = "SELECT * FROM `clients`" ;
+                        $result_service = mysqli_query($conn, $sqlselectservice);
+                        if ($result_service->num_rows > 0) {
+                            while($row_service = $result_service->fetch_assoc()) {
+                        
+                        ?>
+                            <div class="swiper-slide">
+                                <div class="saf_partners_container text-center">
+                                    <a href="javascript:void(0);"><img src='<?php echo $row_service["img"];?>' alt="partner" /></a>
+                                </div>
+                            </div>
+                            <?php
+                            }}?>
+                            </div>
                         </div>
                     </div>
                 </div>

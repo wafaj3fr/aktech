@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" type="image/ico" href="assets/images/index/favicon.png" />
     <title>aktech</title>
-    <style>
+    <!-- <style>
         
 .saf_blog_date {
     background: var(--main-orange-version1);
@@ -79,7 +79,7 @@
     margin-top: 6px;
     margin-bottom: 1px;
 }
-        </style>
+        </style> -->
 </head>
 
 <body>
@@ -111,57 +111,35 @@
         <?php
       include("header.php");
       ?>
-        <!--==========Header Banner Start==============-->
-        <div class="saf_pagetitle">
-            <div class="saf_img_overlay"></div>
-            <div class="container">
+        <!-- about Section -->
+        <section class="saf_about_wrapper">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="page_title">
-                            <h2>Projects</h2>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="saf_about_detail wow fadeInRight">
+                            <h1 class="text-center mt-5 display-3 fw-bold"><span>Our Projects</span></h1>
                         </div>
                     </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <ul class="breadcrumb">
-                            <li><a href="index.php">home</a></li>
-                            <li>//</li>
-                            <li><a href="about.php">Project</a></li>
-                        </ul>
-                    </div>
                 </div>
-            </div>
-        </div>
-        <!--========Header Banner End===============-->
+            </section>
+                <section class="saf_services_wrapper">
+                    <div class="container-fluid">
+                    <div class="row mb-5">
+                    <?php
+                    $sqlselectproject = "SELECT * FROM `project`" ;
+                    $result_project = mysqli_query($conn, $sqlselectproject);
+                    if ($result_project->num_rows > 0) {
+                        while($row_project = $result_project->fetch_assoc()) {
+                    ?>
 
-        <!-- Service Section -->
-        <section class="saf_services_wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center">
-                        <div class="saf_heading">
-                            <h4>Our Project</h4>
-                            <img src="assets/images/index/heading_border.png" alt="" />
-                            <!-- <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices.</p> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                <?php
-                $sqlselectproject = "SELECT * FROM `project`" ;
-                $result_project = mysqli_query($conn, $sqlselectproject);
-                if ($result_project->num_rows > 0) {
-                    while($row_project = $result_project->fetch_assoc()) {
-                ?>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="saf_services_sectionBg service2" style=" background-image: url('<?php echo $row_project["productsimg1"];?>');">
+                    <ul class="project-list">
+                        <li><?php echo $row_project["prodectname"];?></li>
+                    </ul>
+                    <!-- <div class="col-12 col-sm-6 col-md-3 m-auto">
+                        <div class="saf_services_sectionBg projects" >
                             <a href='project-details.php?projectid=<?php echo $row_project["id"];?>'>
-                                <div class="saf_services_section">
-                                    <div class="saf_services_inner">
-                                        <!-- <span class="saf_icon_bg">
-                                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" viewBox="0 0 69.031 70.06">
-                                             <path d="M60.982,38.488 L60.982,40.818 L58.682,40.818 L58.682,38.488 L60.982,38.488 ZM50.632,50.142 L52.932,50.142 L52.932,52.472 L50.632,52.472 L50.632,50.142 ZM40.282,57.134 L40.282,59.465 L37.982,59.465 L37.982,57.134 L40.282,57.134 ZM18.432,52.472 L16.132,52.472 L16.132,50.142 L18.432,50.142 L18.432,52.472 ZM12.682,36.157 L10.382,36.157 L10.382,33.826 L12.682,33.826 L12.682,36.157 ZM18.432,19.841 L16.132,19.841 L16.132,17.510 L18.432,17.510 L18.432,19.841 ZM31.082,12.848 L28.782,12.848 L28.782,10.517 L31.082,10.517 L31.082,12.848 ZM50.632,17.510 L52.932,17.510 L52.932,19.841 L50.632,19.841 L50.632,17.510 ZM58.682,29.165 L58.682,31.495 L56.382,31.495 L56.382,29.165 L58.682,29.165 ZM67.535,33.191 C66.190,34.135 64.375,33.989 63.194,32.843 L56.653,36.157 L50.632,36.157 L50.632,38.488 L56.382,38.488 L56.382,40.818 L50.632,40.818 L50.632,43.149 L61.459,43.149 L64.104,45.829 C64.564,45.601 65.070,45.483 65.582,45.480 C66.977,45.480 68.235,46.332 68.769,47.638 C69.303,48.944 69.008,50.448 68.021,51.448 C67.034,52.448 65.550,52.747 64.262,52.206 C62.973,51.665 62.132,50.391 62.132,48.976 C62.134,48.456 62.252,47.945 62.477,47.478 L60.506,45.480 L50.632,45.480 C50.628,48.696 48.056,51.304 44.882,51.307 L44.882,58.299 L50.844,58.299 C51.404,56.694 53.023,55.732 54.679,56.020 C56.336,56.306 57.546,57.762 57.546,59.465 C57.546,61.168 56.336,62.623 54.679,62.911 C53.023,63.198 51.404,62.236 50.844,60.631 L42.582,60.631 L42.582,51.307 L40.282,51.307 L40.282,54.804 L37.982,54.804 L37.982,51.307 L35.682,51.307 L35.682,59.985 L41.597,63.734 C42.933,62.656 44.842,62.713 46.114,63.868 C47.385,65.026 47.648,66.942 46.735,68.405 C45.822,69.869 44.001,70.451 42.425,69.781 C40.850,69.114 39.980,67.391 40.367,65.705 L33.382,61.275 L33.382,51.307 L31.082,51.307 L31.082,58.299 L28.782,58.299 L28.782,51.307 L26.482,51.307 L26.482,59.949 L21.537,64.960 C21.762,65.426 21.880,65.939 21.882,66.458 C21.882,67.870 21.041,69.147 19.752,69.687 C18.463,70.228 16.980,69.930 15.993,68.930 C15.006,67.929 14.711,66.426 15.245,65.119 C15.779,63.813 17.036,62.961 18.432,62.961 C18.944,62.964 19.450,63.082 19.910,63.311 L24.182,58.982 L24.182,51.307 C21.008,51.304 18.436,48.696 18.432,45.480 L13.297,45.480 L9.474,51.293 C10.584,52.528 10.688,54.384 9.722,55.738 C8.756,57.092 6.984,57.574 5.479,56.892 C3.973,56.210 3.147,54.552 3.498,52.917 C3.850,51.285 5.283,50.126 6.932,50.142 C7.100,50.146 7.267,50.163 7.432,50.193 L12.067,43.149 L18.432,43.149 L18.432,40.818 L8.082,40.818 L8.082,38.488 L18.432,38.488 L18.432,36.157 L14.982,36.157 L14.982,33.826 L18.432,33.826 L18.432,31.495 L11.948,31.495 L6.660,35.961 C6.840,36.392 6.933,36.854 6.932,37.322 C6.932,38.736 6.091,40.011 4.802,40.552 C3.513,41.094 2.030,40.794 1.043,39.794 C0.056,38.794 -0.239,37.290 0.295,35.984 C0.829,34.678 2.086,33.826 3.482,33.826 C4.045,33.830 4.598,33.975 5.092,34.250 L11.116,29.165 L18.432,29.165 L18.432,26.833 L13.355,26.833 L9.560,22.987 C9.100,23.215 8.594,23.335 8.082,23.336 C6.687,23.336 5.429,22.485 4.895,21.179 C4.361,19.873 4.656,18.369 5.643,17.369 C6.630,16.368 8.113,16.071 9.402,16.611 C10.691,17.152 11.532,18.427 11.532,19.841 C11.530,20.361 11.412,20.872 11.187,21.339 L14.308,24.503 L18.432,24.503 C18.436,21.286 21.008,18.680 24.182,18.676 L24.182,11.000 L19.910,6.671 C19.450,6.900 18.944,7.020 18.432,7.022 C17.036,7.022 15.779,6.169 15.245,4.862 C14.711,3.557 15.006,2.053 15.993,1.053 C16.980,0.052 18.463,-0.246 19.752,0.296 C21.041,0.836 21.882,2.112 21.882,3.525 C21.880,4.045 21.762,4.557 21.537,5.025 L26.482,10.035 L26.482,18.676 L28.782,18.676 L28.782,15.179 L31.082,15.179 L31.082,18.676 L33.382,18.676 L33.382,10.303 C31.798,9.736 30.848,8.094 31.131,6.416 C31.416,4.738 32.852,3.511 34.532,3.511 C36.212,3.511 37.648,4.738 37.933,6.416 C38.216,8.094 37.266,9.736 35.682,10.303 L35.682,18.676 L37.982,18.676 L37.982,15.179 L40.282,15.179 L40.282,18.676 L42.582,18.676 L42.582,14.696 L49.827,7.353 C49.602,6.887 49.484,6.375 49.482,5.856 C49.482,4.441 50.323,3.167 51.612,2.626 C52.900,2.085 54.384,2.385 55.371,3.384 C56.358,4.384 56.653,5.889 56.119,7.195 C55.585,8.500 54.327,9.352 52.932,9.352 C52.420,9.351 51.914,9.231 51.454,9.002 L44.882,15.662 L44.882,18.676 C48.056,18.680 50.628,21.286 50.632,24.503 L54.756,24.503 L57.877,21.339 C57.652,20.872 57.534,20.361 57.532,19.841 C57.532,18.427 58.373,17.152 59.662,16.611 C60.951,16.071 62.434,16.368 63.421,17.369 C64.408,18.369 64.703,19.873 64.169,21.179 C63.635,22.485 62.377,23.336 60.982,23.336 C60.469,23.336 59.964,23.215 59.503,22.987 L55.708,26.833 L50.632,26.833 L50.632,29.165 L54.082,29.165 L54.082,31.495 L50.632,31.495 L50.632,33.826 L56.111,33.826 L62.175,30.753 C62.151,30.613 62.137,30.471 62.132,30.329 C62.128,28.670 63.278,27.240 64.880,26.905 C66.483,26.571 68.096,27.425 68.740,28.951 C69.385,30.474 68.881,32.247 67.535,33.191 ZM64.520,49.423 C64.698,49.858 65.117,50.142 65.582,50.142 C66.217,50.142 66.732,49.620 66.732,48.976 C66.732,48.504 66.452,48.080 66.022,47.900 C65.592,47.719 65.098,47.819 64.769,48.153 C64.440,48.485 64.341,48.987 64.520,49.423 ZM53.642,60.542 C54.071,60.721 54.566,60.623 54.895,60.288 C55.224,59.956 55.323,59.455 55.144,59.018 C54.966,58.583 54.547,58.299 54.082,58.299 C53.447,58.299 52.932,58.822 52.932,59.465 C52.932,59.936 53.212,60.361 53.642,60.542 ZM43.292,67.534 C43.721,67.715 44.216,67.614 44.545,67.282 C44.874,66.948 44.973,66.448 44.794,66.011 C44.616,65.575 44.197,65.292 43.732,65.292 C43.097,65.292 42.582,65.814 42.582,66.458 C42.582,66.928 42.862,67.354 43.292,67.534 ZM18.872,65.381 C18.443,65.199 17.948,65.301 17.619,65.634 C17.290,65.966 17.191,66.468 17.370,66.903 C17.548,67.339 17.967,67.623 18.432,67.623 C19.067,67.623 19.582,67.100 19.582,66.458 C19.582,65.986 19.302,65.561 18.872,65.381 ZM7.372,52.561 C6.943,52.381 6.448,52.481 6.119,52.814 C5.790,53.147 5.691,53.649 5.870,54.084 C6.048,54.520 6.467,54.804 6.932,54.804 C7.567,54.804 8.082,54.282 8.082,53.638 C8.082,53.167 7.802,52.742 7.372,52.561 ZM3.922,36.245 C3.493,36.065 2.998,36.165 2.669,36.498 C2.340,36.832 2.241,37.333 2.420,37.768 C2.598,38.205 3.017,38.488 3.482,38.488 C4.117,38.488 4.632,37.965 4.632,37.322 C4.632,36.851 4.352,36.427 3.922,36.245 ZM8.895,19.017 C8.566,18.684 8.071,18.583 7.642,18.764 C7.212,18.945 6.932,19.370 6.932,19.841 C6.932,20.484 7.447,21.006 8.082,21.006 C8.547,21.006 8.966,20.723 9.144,20.286 C9.323,19.851 9.224,19.350 8.895,19.017 ZM19.245,2.701 C18.916,2.369 18.421,2.268 17.992,2.449 C17.562,2.629 17.282,3.054 17.282,3.525 C17.282,4.168 17.797,4.691 18.432,4.691 C18.897,4.691 19.316,4.407 19.494,3.971 C19.673,3.536 19.574,3.035 19.245,2.701 ZM52.492,6.933 C52.921,7.114 53.416,7.013 53.745,6.679 C54.074,6.347 54.173,5.846 53.994,5.411 C53.816,4.975 53.397,4.691 52.932,4.691 C52.297,4.691 51.782,5.213 51.782,5.856 C51.782,6.327 52.062,6.753 52.492,6.933 ZM35.594,6.575 C35.416,6.140 34.997,5.856 34.532,5.856 C33.897,5.856 33.382,6.378 33.382,7.022 C33.382,7.492 33.662,7.918 34.092,8.098 C34.521,8.278 35.016,8.179 35.345,7.845 C35.674,7.512 35.773,7.010 35.594,6.575 ZM48.332,24.503 C48.332,22.572 46.787,21.006 44.882,21.006 L24.182,21.006 C22.277,21.006 20.732,22.572 20.732,24.503 L20.732,45.480 C20.732,47.411 22.277,48.976 24.182,48.976 L44.882,48.976 C46.787,48.976 48.332,47.411 48.332,45.480 L48.332,24.503 ZM60.542,20.917 C60.971,21.098 61.466,20.998 61.795,20.665 C62.124,20.331 62.223,19.830 62.044,19.395 C61.866,18.959 61.447,18.676 60.982,18.676 C60.347,18.676 59.832,19.198 59.832,19.841 C59.832,20.312 60.112,20.737 60.542,20.917 ZM66.644,29.883 C66.466,29.448 66.047,29.165 65.582,29.165 C64.947,29.165 64.432,29.687 64.432,30.329 C64.432,30.800 64.712,31.226 65.142,31.407 C65.571,31.587 66.066,31.487 66.395,31.154 C66.724,30.820 66.823,30.319 66.644,29.883 ZM39.132,46.646 L29.932,46.646 C28.027,46.646 26.482,45.081 26.482,43.149 L26.482,33.826 C26.488,32.349 27.408,31.037 28.782,30.544 L28.782,29.165 C28.782,25.946 31.356,23.336 34.532,23.336 C37.708,23.336 40.282,25.946 40.282,29.165 L40.282,30.544 C41.656,31.037 42.576,32.349 42.582,33.826 L42.582,43.149 C42.582,45.081 41.037,46.646 39.132,46.646 ZM37.982,29.165 C37.982,27.234 36.437,25.668 34.532,25.668 C32.627,25.668 31.082,27.234 31.082,29.165 L31.082,30.329 L37.982,30.329 L37.982,29.165 ZM40.282,33.826 C40.282,33.182 39.767,32.660 39.132,32.660 L29.932,32.660 C29.297,32.660 28.782,33.182 28.782,33.826 L28.782,43.149 C28.782,43.793 29.297,44.315 29.932,44.315 L39.132,44.315 C39.767,44.315 40.282,43.793 40.282,43.149 L40.282,33.826 ZM35.682,40.603 L35.682,43.149 L33.382,43.149 L33.382,40.612 C31.813,40.062 30.854,38.454 31.103,36.791 C31.352,35.128 32.737,33.881 34.396,33.826 C36.101,33.752 37.602,34.954 37.924,36.652 C38.246,38.350 37.292,40.032 35.682,40.603 ZM35.682,37.276 C35.657,36.650 35.150,36.157 34.532,36.157 L34.486,36.157 C34.021,36.175 33.613,36.475 33.452,36.919 C33.291,37.360 33.409,37.859 33.751,38.177 C33.975,38.388 34.273,38.499 34.578,38.488 C34.883,38.476 35.171,38.342 35.377,38.115 C35.585,37.887 35.694,37.586 35.682,37.277 L35.682,37.276 ZM37.982,10.517 L40.282,10.517 L40.282,12.848 L37.982,12.848 L37.982,10.517 ZM31.082,62.961 L28.782,62.961 L28.782,60.631 L31.082,60.631 L31.082,62.961 Z"/>
-                                          </svg>
-                                       </span> -->
+                                <div class="ser-card shadow">
+                                    <div class="card-body">
                                         <h4 class="saf_service_title"><?php echo $row_project["prodectname"];?></h4>
                                         <span class="saf_icon_border">
                                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" viewBox="0 0 151 19">
@@ -177,16 +155,42 @@
                                 </div>
                             </a>
                         </div>
-                    </div>
+                    </div> -->
                     <?php
 					}}?>
                     
                 </div>
+                    </div>
+                </section>
             </div>
-        </section>
 
         <!-- Blog Start -->
-         <section class="saf_blog_wrapper saf_blog_page_wrapper">
+
+        <div id="featured-projects" class="carousel">
+            <?php
+                                        $sqlselectproject = "SELECT * FROM `project`" ;
+                                        $result_project = mysqli_query($conn, $sqlselectproject);
+                                        if ($result_project->num_rows > 0) {
+                                            while($row_project = $result_project->fetch_assoc()) {
+                                        ?>
+            <div class="carousel-inner">
+            <a href='project-details.php?projectid=<?php echo $row_project["id"];?>' class="saf_blog_img">
+                                                    <img src='<?php echo $row_project["productsimg1"];?>' alt="" />
+                                                    
+                                                </a>
+                </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#featured-projects" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#featured-projects" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <?php
+            }}?>
+            </div>
+         <!-- <section class="saf_blog_wrapper saf_blog_page_wrapper">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-12">
@@ -226,7 +230,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
     </div>
     <!-- Partner Start -->
     <div class="saf_partner_wrapper">
@@ -259,6 +263,7 @@
                 </div>
             </div>
         </div>
+
     <!-- Footer Start -->
     <?php
    include("footer.php");
@@ -275,6 +280,52 @@
     <script src="../assets/js/tilt.js"></script>
     <script src="../assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+        // Assuming you have an array of project data (replace with your data source)
+const projects = [
+  {
+    image: "project1.jpg",
+    link: "project1.html",
+    title: "Project 1 Title",
+  },
+  {
+    image: "project2.jpg",
+    link: "project2.html",
+    title: "Project 2 Title",
+  },
+  // Add more project objects as needed
+];
+
+// Function to create a carousel item for a project
+function createProjectSlide(project) {
+  const slide = document.createElement("div");
+  slide.classList.add("carousel-item");
+
+  const image = document.createElement("img");
+  image.src = project.image;
+  image.alt = project.title;
+  slide.appendChild(image);
+
+  const link = document.createElement("a");
+  link.href = project.link;
+  link.classList.add("d-block", "w-100"); // Cover entire slide area
+  link.style.cursor = "pointer"; // Set cursor to pointer on hover
+  slide.appendChild(link);
+
+  return slide;
+}
+
+// Create carousel slides based on project data
+const carouselInner = document.querySelector(".carousel-inner");
+projects.forEach((project) => {
+  const slide = createProjectSlide(project);
+  carouselInner.appendChild(slide);
+});
+
+// Initialize Bootstrap carousel (optional)
+const carousel = new bootstrap.Carousel(document.getElementById("featured-projects"));
+
+    </script>
     
 </body>
 

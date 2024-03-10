@@ -589,3 +589,9 @@ serviceCards.forEach(card => {
     details.classList.toggle('show'); // Toggle visibility on click
   });
 });
+
+const myCarouselElement = document.querySelector('#carouselIndicators')
+        const carousel = new bootstrap.Carousel(myCarouselElement, {
+        interval: 2000,
+        touch: false
+})

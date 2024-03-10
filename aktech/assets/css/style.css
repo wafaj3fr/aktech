@@ -23,7 +23,8 @@ Author: Kamleshyadav
 15. Blog CSS Start
 16. Footer CSS Start
 17. About Page Style
-17. Responsive CSS Start
+18. Projects
+19. Responsive CSS Start
 -------------------------------------------------------------------*/
 
 
@@ -775,6 +776,21 @@ header {
     transition: all 0.5s;
 }
 
+.w3-content {
+    display: flex;
+    justify-content: center;
+}
+
+.w3-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 /********************************************************
 9. Service CSS Start
@@ -802,9 +818,9 @@ header {
 
 .saf_services_sectionBg {
     content: "";
-    background-position: center;
+    /* background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
 .saf_services_sectionBg a {
@@ -813,26 +829,7 @@ header {
 
 }
 
-.saf_services_sectionBg.servicepm {
-    background-image: url(../images/index/pm.jpg);
-}
-
-.saf_services_sectionBg.serviceele {
-    background-image: url(../images/index/eng.jpg);
-}
-
-.saf_services_sectionBg.serviceTurnkey {
-    background-image: url(../images/index/Turnkey.png);
-}
-
-.saf_services_sectionBg.serviceAsset {
-    background-image: url(../images/index/Asset.jpg);
-}
-.saf_services_sectionBg.serviceeletest {
-    background-image: url(../images/index/ele.jpg);
-}
-
-.saf_services_sectionBg.service2 {
+/* .saf_services_sectionBg.service2 {
     background-image: url(https://via.placeholder.com/370x328);
 }
 
@@ -850,7 +847,7 @@ header {
 
 .saf_services_sectionBg.service6 {
     background-image: url(https://via.placeholder.com/370x328);
-}
+} */
 
 .saf_services_section {
     background-color: var(--main-bg-color);
@@ -1569,19 +1566,6 @@ header {
     line-height: 10px;
     font-size: 14px;
     padding-bottom: 6px;
-    /* background: var(--main-orange-version1);
-    color: var(--main-bg-color);
-    width: 92px;
-    display: inline-block;
-    text-align: center;
-    padding: 0px 0;
-    position: absolute;
-    right: 24px;
-    top: -10px;
-    height: 50px;
-    line-height: 10px;
-    font-size: 14px;
-    padding-bottom: 6px; */
 }
 
 .saf_blog_date:before {
@@ -1603,26 +1587,6 @@ header {
     border-right: 8px solid transparent;
     right: -8px;
 }
-
-/* .saf_blog_date:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    border-right: 0 solid transparent;
-    border-bottom: 10px solid var(--main-orange-version1);
-    border-left: 8px solid transparent;
-    left: -8px;
-}
-
-.saf_blog_date:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    border-left: 0 solid transparent;
-    border-bottom: 10px solid var(--main-orange-version1);
-    border-right: 8px solid transparent;
-    right: -8px;
-} */
 
 .saf_blog_date b {
     font-size: 28px;
@@ -2010,6 +1974,11 @@ img.footer_logo {
     height: 200px;
     width: 100%;
   }
+  /* .card-img-top {
+    height: 90px;
+    object-fit: cover;
+      width: 40px;;
+  } */
   .container-fluid .ser-card {
     z-index: 1;
     overflow: hidden;
@@ -2030,13 +1999,42 @@ img.footer_logo {
     color: #fff;
   }
 
-  .ser-card p {
+  .ser-card p{
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     transition: all 0.5s ease;
 }
+
+.ser-card ul {
+    display: -webkit-box; /* Corrected */
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    text-align: left;
+    list-style: none;
+}
+.ser-card li{
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 5px; 
+}
+ion-icon{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    margin-right: 5px
+}
+  
+.ser-card:hover ul {
+    -webkit-line-clamp: unset;
+    /* No further changes needed for hover effect */
+}
+
 .card-link {
     display: block;
     width: 100%;
@@ -2047,6 +2045,9 @@ img.footer_logo {
 }
 
 .ser-card:hover p {
+    -webkit-line-clamp: unset;
+}
+.has-bullets:hover {
     -webkit-line-clamp: unset;
 }
 
@@ -2065,9 +2066,24 @@ img.footer_logo {
   width: 100%;  /* Keep full width */
   height: 100%;  /* Keep full height */
   /* Added property */
-  transform: scale(1);  /* Reset scale to 1 */
+  transform: scale(1);
     color: white;
   }
+
+  .projects {
+    margin: 15px;
+  }
+
+  .projects .ser-card{
+    height: 350px;
+    margin-bottom: 20px;
+  }
+
+  .projects p,
+  .projects h4{
+    padding: 0 10px;
+  }
+
   .container-fluid {
     background-image: url("blob-scene-haikei.svg");
     background-position: center;
@@ -2867,9 +2883,47 @@ textarea.saf_form_field {
     margin-bottom: 30px;
 }
 
+/******************************************************
+18. Projects
+*******************************************************/
+
+
+    .project-list {
+        list-style: none; /* Remove default bullet points */
+        padding: 20; /* Remove default padding */
+        margin: 20px auto; /* Center the list horizontally */
+        width: fit-content; /* Allow list to adjust width to content */
+        max-width: 80%; /* Set a maximum width if needed */
+        text-align: center;
+      }
+      
+      .project-list li {
+        display: inline-block; /* Display list items inline */
+        margin: 10px; /* Add margin between list items */
+        text-align: center; /* Center text within each list item */
+        /* Optional: Add styles for hover effects, background colors, etc. */
+      }
+
+      #featured-projects {
+        /* Style the carousel container here */
+      }
+      
+      .carousel-inner {
+        /* Style the inner container for slides here */
+      }
+      
+      .carousel-item {
+        /* Style individual project slides here */
+      }
+      
+      .carousel-item img {
+        /* Style the project images here */
+        width: 100%; /* Adjust width as needed */
+        height: auto; /* Maintain aspect ratio */
+      }
 
 /********************************************************
-17. Responsive CSS Start
+19. Responsive CSS Start
 ********************************************************/
 
 @media (min-width: 1400px) {

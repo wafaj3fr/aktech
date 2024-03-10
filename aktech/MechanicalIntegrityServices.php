@@ -154,7 +154,12 @@
                     <div class="card-body">
                         <h3 class="text-center">Mechanical Inspection Services</h3>
                         <hr class="mx-auto w-75">
-                        <p><?php echo $row_project["servicedet6"];?></p>
+                        <ul>
+                          <li><ion-icon name="disc-outline"></ion-icon>Advanced NDT Service: AE, PAUT, TOFD and Long Guided Waves.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Tanks and Vessels Inspections as per API 653 by API Certified Inspector.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Piping System Inspection as per API 507 by API Certified Inspector.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Developing WPS, WQT, PQR for New Construction and In-service Pipeline by Certified Welding Engineer. IWE and CSWIP 3.1</li>
+                      </ul>
                     </div>
                 </div>
                 <!-- card ends here -->
@@ -212,6 +217,8 @@
     <script src="../assets/js/wow.min.js"></script>
     <script src="../assets/js/tilt.js"></script>
     <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
 function myFunction() {

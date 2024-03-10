@@ -70,7 +70,10 @@
                             ?>
         <h1 class="text-center mt-5 display-3 fw-bold" style="margin:15px;"><span class="theme-text">Electrical Testing </span><br> & Commissioning Services</h1>
         <hr class="mx-auto mb-5 w-25">
-        <p class="text-center mb-5"><?php echo $row_project["servicedet"];?></p>
+        <p class="text-center mb-5">
+          <?php echo $row_project["servicedet"];?>
+          <?php echo $row_project["servicedet2"];?>
+        </p>
         <div class="row mb-5">
             <div class="col-12 col-sm-6 col-md-3 m-auto">
                 <!-- card starts here -->
@@ -147,7 +150,18 @@
                     <div class="card-body">
                         <h3 class="text-center">Earthing System Testing and Analysis</h3>
                         <hr class="mx-auto w-75">
-                        <p> <?php echo $row_project["servicedet8"];?></p>
+                        <ul>
+                          <li><ion-icon name="disc-outline"></ion-icon>Transformer oil dielectric strength test set.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Transformer turn ratio test set.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Transformer winding resistance test set.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Hi-pot tester (high voltage (AC/DC) withstand test set).</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Contact resistance test set (micro-ohmmeter).</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Circuit breaker mechanical characteristics analyzer.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Protection relay test set (secondary injection tester).</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Primary current injection test set.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Current/voltage transformer analyzer.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Insulation resistance test set (2500V/ 1000V / 500V megger).</li>
+                      </ul>
                     </div>
                 </div>
                 <!-- card ends here -->
@@ -203,6 +217,8 @@
     <script src="../assets/js/swiper.min.js"></script>
     <script src="../assets/js/wow.min.js"></script>
     <script src="../assets/js/tilt.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>

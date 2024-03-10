@@ -1,21 +1,5 @@
 <!DOCTYPE html>
-<!-- 
-   Template Name: Multifarious - Responsive HTML Template 
-   Version: 1.0.0
-   Author: Kamleshyadav
-   Website: 
-   Purchase: 
-   -->
-<!--[if IE 8]> 
-<html lang="en" class="ie8 no-js">
-   <![endif]-->
-<!--[if IE 9]> 
-   <html lang="en" class="ie9 no-js">
-      <![endif]-->
-<!--[if !IE]><!-->
 <html lang="zxx">
-<!--<![endif]-->
-<!-- Begin Head -->
 <?php 
   include("admin/conn.php");
 ?>
@@ -71,6 +55,7 @@
 
         <!-- Blog Start -->
 
+
   <div class="container-fluid">
         <?PhP
                             $id = 'Project Management';
@@ -82,7 +67,7 @@
                             ?>
         <h1 class="text-center mt-5 display-3 fw-bold" style="margin:15px;"><span class="theme-text">Project </span>Management</h1>
         <hr class="mx-auto mb-5 w-25">
-        <p class="text-center mb-5"><?php echo $row_project["servicedet"];?></p>
+        <p class="text-center mb-5"><?php echo $row_project["servicedet"];?> </p>
         <div class="row mb-5">
             <div class="col-12 col-sm-6 col-md-3 m-auto">
                 <!-- card starts here -->

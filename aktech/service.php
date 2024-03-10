@@ -1,21 +1,5 @@
 <!DOCTYPE html>
-<!-- 
-   Template Name: Multifarious - Responsive HTML Template 
-   Version: 1.0.0
-   Author: Kamleshyadav
-   Website: 
-   Purchase: 
-   -->
-<!--[if IE 8]> 
-<html lang="en" class="ie8 no-js">
-   <![endif]-->
-<!--[if IE 9]> 
-   <html lang="en" class="ie9 no-js">
-      <![endif]-->
-<!--[if !IE]><!-->
 <html lang="zxx">
-<!--<![endif]-->
-<!-- Begin Head -->
 <?php 
   include("admin/conn.php");
 ?>
@@ -79,13 +63,10 @@
                                 <h1 class="text-center mt-5 display-3 fw-bold"><span>Our Services</span></h1>
                                 <p class="text-center mb-5">As a general EPC contractor for infrastructure projects and turnkey industrial plants, we offer all required services out of one hand so as to provide a “Single-point-of-responsibility”</p>
                                 <h5 class="text-center">Our range of Services includes:</h5>
-                            
                             </div>
                         </div>
-                       
                 </div>
             </div>
-            
         </section>
 
         <!-- Service Section -->
@@ -169,6 +150,12 @@
                     </div>
                 </div>
                 <div class="row mb-5">
+                    <?PHP 
+                           $sqlproject = "SELECT * FROM `services` WHERE `servicesName` = 'Asset Integrity & Mechanical Inspection'";
+
+                           $prodect_project=$conn->query($sqlproject);
+                           $row_project = $prodect_project->fetch_assoc();
+                            ?>
                 <div class="col-12 col-sm-6 col-md-3 m-auto" data-wow-delay="300ms">
                         <div class="saf_services_sectionBg">
                             <a href="MechanicalIntegrityServices.php?serviceid=<?php echo $row_project["servicesid"];?>">
@@ -213,14 +200,38 @@
                         </div>
                     </div>
                 </div>
-                    <?PHP 
-                           $sqlproject = "SELECT * FROM `services` WHERE `servicesName` = 'Asset Integrity & Mechanical Inspection'";
-
-                           $prodect_project=$conn->query($sqlproject);
-                           $row_project = $prodect_project->fetch_assoc();
-                            ?>
             </div>
         </section>
+
+        <div class="saf_partner_wrapper">
+            <div class="container">
+                <div class="saf_heading">
+                    <h4>Our Clients |Partners</h4>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="partner_slider swiper-container">
+                            <div class="swiper-wrapper">
+                            <?php
+                        $sqlselectservice = "SELECT * FROM `clients`" ;
+                        $result_service = mysqli_query($conn, $sqlselectservice);
+                        if ($result_service->num_rows > 0) {
+                            while($row_service = $result_service->fetch_assoc()) {
+                        
+                        ?>
+                            <div class="swiper-slide">
+                                <div class="saf_partners_container text-center">
+                                    <a href="javascript:void(0);"><img src='<?php echo $row_service["img"];?>' alt="partner" /></a>
+                                </div>
+                            </div>
+                            <?php
+                            }}?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
        
 
         <!-- footer Start -->

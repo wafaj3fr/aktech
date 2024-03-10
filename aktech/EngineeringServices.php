@@ -99,7 +99,17 @@
                     <div class="card-body">
                         <h3 class="text-center"><?php echo $row_project["servicedettitel"];?></h3>
                         <hr class="mx-auto w-75">
-                        <p><?php echo $row_project["servicedet"];?></p>
+                        <ul>
+                        
+                          <li><ion-icon name="disc-outline"></ion-icon><?php echo $row_project["bullet1"];?></li>
+                          <li><ion-icon name="disc-outline"></ion-icon><?php echo $row_project["bullet2"];?></li>
+                          <li><ion-icon name="disc-outline"></ion-icon><?php echo $row_project["bullet3"];?></li>
+                          <li><ion-icon name="disc-outline"></ion-icon><?php echo $row_project["bullet4"];?></li>
+                          <li><ion-icon name="disc-outline"></ion-icon><?php echo $row_project["bullet5"];?></li>
+                          <li><ion-icon name="disc-outline"></ion-icon><?php echo $row_project["bullet6"];?></li>
+                          <li><ion-icon name="disc-outline"></ion-icon><?php echo $row_project["bullet7"];?></li>
+                          <li><ion-icon name="disc-outline"></ion-icon><?php echo $row_project["bullet8"];?></li>
+                        </ul>
                     </div>
                 </div>
                 <!-- card ends here -->
@@ -112,7 +122,14 @@
                     <div class="card-body">
                         <h3 class="text-center"><?php echo $row_project["servicedettitel2"];?></h3>
                         <hr class="mx-auto w-75">
-                        <p> <?php echo $row_project["servicedet3"];?></p>
+                        <ul>
+                          <li><ion-icon name="disc-outline"></ion-icon>Definition, selection and sizing of main equipment.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Producing main equipment data sheets and specifications.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Development of process piping and instrumentation diagrams “P&IDs”.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Development of utilities piping and instrumentation diagrams “P&IDs”.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Development of detailed plot plans.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Elaboration of the main piping, instrumentation, electrical and civil works layouts.</li>
+                        </ul>
                     </div>
                 </div>
                 <!-- card ends here -->
@@ -141,7 +158,14 @@
                     <div class="card-body">
                         <h3 class="text-center"><?php echo $row_project["servicedettitel5"];?></h3>
                         <hr class="mx-auto w-75">
-                        <p><?php echo $row_project["servicedet5"];?></p>
+                        <ul>
+                          <li><ion-icon name="disc-outline"></ion-icon>Process Design Basis</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Process flow diagrams</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Piping and instrumentation diagrams</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Process design calculations and equipment sizing</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Operation and control philosophy</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Commissioning Manuals</li>
+                        </ul>
                     </div>
                 </div>
                 <!-- card ends here -->
@@ -167,7 +191,12 @@
                     <div class="card-body">
                         <h3 class="text-center"><?php echo $row_project["servicedettitel7"];?></h3>
                         <hr class="mx-auto w-75">
-                        <p> <?php echo $row_project["servicedet7"];?></p>
+                        <ul>
+                          <li><ion-icon name="disc-outline"></ion-icon>Authorization for Expenditure (AFE) & Total Installed Cost (TIC) Estimating.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Preparation of equipment and piping layouts, general arrangements.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Rotating Equipment Design /selection.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Vessels & Tanks Design/Specifications (AME TANK. PV ELITE, etc.).</li>
+                        </ul>
                     </div>
                 </div>
                 <!-- card ends here -->
@@ -185,20 +214,38 @@
                     <div class="card-body">
                         <h3 class="text-center"><?php echo $row_project["servicedettitel8"];?></h3>
                         <hr class="mx-auto w-75">
-                        <p> <?php echo $row_project["servicedet8"];?></p>
+                        <ul>
+                          <li><ion-icon name="disc-outline"></ion-icon>Hydraulic Analysis.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Relief System Analysis.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Installed Cost (TIC) Estimating.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Piping/Pipelines Design Calculations.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Including process & utilities piping, & firefighting ring design.</li>
+                          <li><ion-icon name="disc-outline"></ion-icon>Preparation of equipment and piping layouts, general arrangements.</li>
+                        </ul>
+                      </div>
                     </div>
-                </div>
-              
+                    
                 <!-- card ends here -->
-            </div>
-            <div class="col-12 col-sm-6 col-md-3 m-auto">
+              </div>
+              <div class="col-12 col-sm-6 col-md-3 m-auto">
                 <!-- card starts here -->
                 <div class="ser-card shadow">
-                <img src="./assets/images/index/cost1.png" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="text-center"><?php echo $row_project["servicedettitel9"];?></h3>
-                        <hr class="mx-auto w-75">
-                        <p> <?php echo $row_project["servicedet9"];?></p>
+                  <img src="./assets/images/index/cost1.png" alt="" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="text-center"><?php echo $row_project["servicedettitel9"];?></h3>
+                    <hr class="mx-auto w-75">
+                      <ul>
+                        <li><ion-icon name="disc-outline"></ion-icon>Power System Modelling and Studies “ETAP”.</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>Medium and Low Voltage power distribution system design</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>Single line/schematic diagrams</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>Grounding & Lightning protection system design.</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>Cabling system design, sizing and layout.</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>Lighting System design.</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>Heat tracing systems.</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>Protection coordination study.</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>Motor Control and Switchgear Design.</li>
+                        
+                      </ul>
                     </div>
                 </div>
                 <!-- card ends here -->
@@ -211,7 +258,18 @@
                     <div class="card-body">
                         <h3 class="text-center"><?php echo $row_project["servicedettitel10"];?></h3>
                         <hr class="mx-auto w-75">
-                        <p> <?php echo $row_project["servicedet10"];?></p>
+                        <ul>
+                        <li><ion-icon name="disc-outline"></ion-icon>Operation and control philosophies.</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>Block diagrams.</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>Wiring schematics.</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>Hook-up drawings.</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>Instrumentations specifications.</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>Loop diagrams.</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>Instrument’s locations layout.</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>PLC programming, SCADA integration.</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>Interface development.</li>
+                        <li><ion-icon name="disc-outline"></ion-icon>Instrument cabling design</li>
+                      </ul>
                     </div>
                 </div>
                 <!-- card ends here -->
@@ -320,6 +378,8 @@
     <script src="../assets/js/tilt.js"></script>
     <script src="../assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script>
 function myFunction() {
   var dots = document.getElementById("dots");

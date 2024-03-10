@@ -72,29 +72,54 @@ div.desc {
         <?php
       include("header.php");
       ?>
-        <!-- Banner Wraapper -->
-        <!--==========Header Banner Start==============-->
-        <div class="saf_pagetitle">
-            <div class="saf_img_overlay"></div>
-            <div class="container wow fadeInUp" data-wow-duration="1s">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="page_title">
-                            <h2>About Us</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <ul class="breadcrumb">
-                            <li><a href="index.html">home</a></li>
-                            <li>//</li>
-                            <li><a href="about.html">About us</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--========Header Banner End===============-->
         <!-- About Section Start -->
+
+        <!-- <h1>About Us</h1>
+
+
+        <div class="container-fluid">
+        <section class="about-intro">
+    <div class="intro-text">
+      <h1>Big Headline</h1>
+      <h3>Smaller Headline</h3>
+      <p>Paragraph explaining your company or organization.</p>
+    </div>
+    <div class="intro-image">
+      <img src="image.jpg" alt="Company Image">
+    </div>
+  </section>
+
+  <section class="vision-mission">
+    <h2>Our Vision & Mission</h2>
+    <p>Paragraph describing your vision and mission statements.</p>
+  </section>
+
+  <section class="management-system">
+    <h2>Management System</h2>
+    <div class="card">
+      <h3 class="card-title">Expandable Card 1</h3>
+      <div class="card-content">
+        <p>Details about card 1.</p>
+      </div>
+      <button class="card-toggle">Read More</button>
+    </div>
+    <div class="card">
+      <h3 class="card-title">Expandable Card 2</h3>
+      <div class="card-content">
+        <p>Details about card 2.</p>
+      </div>
+      <button class="card-toggle">Read More</button>
+    </div>
+    <div class="card">
+      <h3 class="card-title">Expandable Card 3</h3>
+      <div class="card-content">
+        <p>Details about card 3.</p>
+      </div>
+      <button class="card-toggle">Read More</button>
+    </div>
+  </section> -->
+
+        </div>
         <section class="saf_about_wrapper" id="About">
         <div class="container"> <br><br>
         <br>
@@ -157,8 +182,6 @@ div.desc {
                         <div class="saf_price_box saf_price_center wow fadeInUp" data-wow-duration="1s">
                             <div class="saf_price_content">
                             </div>
-                           
-
                             <div class="saf_about_detail wow" style="font-size: 50px;
                             color: var(--main-orange-version1);text-align-last: left;color:#1961ac;"><h1>&nbsp;&nbsp;&nbsp; <span>Vision</span></h1></div>
                             <p class="mb-4" class="saf_about_detail wow fadeInRight">
@@ -169,7 +192,6 @@ div.desc {
                             echo $row_prodect["detiles"]."...";
                             ?>
                             </p>
-                            
                             <div class="saf_price_content">
                                 <ul>
                                 <?php
@@ -193,7 +215,6 @@ div.desc {
                     echo "<li>".$row_prodect["detiles8"]."</li>";
                     echo "<li>".$row_prodect["detiles2"]."</li>".'';
                     ?>
-                           
                        </div>
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 col-12">
@@ -250,7 +271,6 @@ div.desc {
                                                 <a target="_blank" href="image.png">
                                                     <img src="image.png" alt="Forest" width="600" height="400">
                                                 </a>
-                                                <!-- <div class="desc">Add a description of the image here</div> -->
                                                 </div>
                                         </span></p>
                                     </div>
@@ -281,7 +301,6 @@ div.desc {
                                              <a target="_blank" href="QHSE.png">
                                                  <img src="QHSE.png" alt="Forest" width="1000" height="400">
                                              </a>
-                                             <!-- <div class="desc">Add a description of the image here</div> -->
                                              </div>
                               </span>
                                  </center>
