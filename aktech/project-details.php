@@ -59,7 +59,7 @@
         </div>
     </div>
         <!-- Header Start -->
-        <?php
+    <?php
       include("header.php");
       ?>
         <!-- Blog Start -->
@@ -76,45 +76,55 @@
                             $row_project = $prodect_project->fetch_assoc();
                             
                         ?>
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div class="saf_blog_thumb text-center">
-                                            <a href="#">
-                                                <h4 class="saf_blog_title saf_S_blog_title"><?php echo $row_project["prodecttype"];?></h4>
-                                            </a>
-                                            <ul class="saf_blog_info">
-                                                <li>
-                                                    <a href=""><img src="assets/images/index/location.png" alt="" width="40" height="40"/><?php echo $row_project["Location"]; ?></a>
-                                                </li>
-                                                <li>
-                                                    <a href=""><img src="assets/images/index/date.png" alt="" width="35" height="35"/><?php echo $row_project["Date"]; ?></a>
-                                                </li>
-                                            </ul>
-                                            <div class="blog_text wow fadeInLeft" data-wow-duration="1s">
-                                                <b>Scope of Work</b>
-                                                <p><?php echo $row_project["scope"];?></p>
-                                                <br>
-                                                <div class="w3-content">
-                                                    <img class="mySlides" src='<?php echo $row_project["productsimg1"]; ?>' style="max-width: 100%; height: auto;">
-                                                    <img class="mySlides" src='<?php echo $row_project["productsimg2"]; ?>' style="max-width: 100%; height: auto;">
-                                                    <img class="mySlides" src='<?php echo $row_project["productsimg3"]; ?>' style="max-width: 100%; height: auto;">
-                                                    <img class="mySlides" src='<?php echo $row_project["productsimg4"]; ?>' style="max-width: 100%; height: auto;">
-                                                
-                                                    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-                                                    <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="saf_blog_thumb">
+                                            
+                                            <div class="headlines">
+                                               
+                                                    <h4 class=" saf_S_blog_title"><?php echo $row_project["prodectname"];?></h4>
+                                                    <h5><?php echo $row_project["prodecttype"];?></h5>
+                                    
+                                                <ul class="saf_blog_info">
+                                                    <li class="info_item">
+                                                        <i class="fa fa-location-arrow" aria-hidden="true"></i><p><?php echo $row_project["Location"]; ?></p>
+                                                    </li>
+                                                    <li class="info_item">
+                                                        <i class="fa fa-calendar-check-o" aria-hidden="true"></i><p><?php echo $row_project["Date"]; ?></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="d-flex align-items-center" style="max-width: 100%;">
+                                                <div class="blog_text wow fadeInLeft" data-wow-duration="1s" style="flex: 1;">
+                                                    <b>Project Description</b>
+                                                    <br><br>
+                                                    <p><?php echo $row_project["prodectdetails"];?></p>
+                                                    <br>
+                                                    <p><?php echo $row_project["prodectdetails1"];?></p>
+                                                    <b>Aktech Scope</b>
+                                                    <p><?php echo $row_project["scope"];?></p>
+                                                    <br>
+                                                </div>
+                                                <div class="image-holder" style="flex: 1; border-radius:20%; margin-left:50px">
+                                                    <img src="<?php echo $row_project["productsimg1"]; ?>" alt="" style="max-width: 100%; height: auto; max-height: 100%;">
                                                 </div>
                                             </div>
 
+
+                                        </div>
                                     </div>
                                 </div>
-                               
-                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
+    
+    <?php
+    include("featured-projects.php");
+    ?>
     <!-- Partner Start -->
 
 
@@ -161,26 +171,41 @@
     <script src="../assets/js/swiper.min.js"></script>
     <script src="../assets/js/wow.min.js"></script>
     <script src="../assets/js/tilt.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
     var slideIndex = 1;
-    showDivs(slideIndex);
+    showSlides(slideIndex);
 
     function plusDivs(n) {
-    showDivs(slideIndex += n);
+        showSlides(slideIndex += n);
     }
 
-    function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        
+        if (slides.length < 2) { // Disable buttons if there's only one slide
+            document.getElementsByClassName("w3-button")[0].style.display = "none";
+            document.getElementsByClassName("w3-button")[1].style.display = "none";
+            return;
+        } else {
+            document.getElementsByClassName("w3-button")[0].style.display = "block";
+            document.getElementsByClassName("w3-button")[1].style.display = "block";
+        }
+
+        if (n > slides.length) { slideIndex = 1; }  // Reset to the beginning
+        if (n < 1) { slideIndex = slides.length; } // Move to the last slide if going back from the first
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
     }
-    x[slideIndex-1].style.display = "block";  
-    }
+</script>
+
     </script>
 </body>
 

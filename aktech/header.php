@@ -37,7 +37,7 @@
 
                                         <li class="has_submenu">
                                         <a href="project.php">Projects</a>
-                                            <ul class="sub_menu">
+                                            <!-- <ul class="sub_menu">
                                         <?php
                                         $sqlselectproject = "SELECT * FROM `project`" ;
                                         $result_project = mysqli_query($conn, $sqlselectproject);
@@ -47,7 +47,7 @@
                                         <li><a href='project-details.php?projectid=<?php echo $row_project["id"];?>'><?php echo $row_project["prodectname"];?></a></li>
                                             <?php
 							                }}?>
-                                            </ul>
+                                            </ul> -->
 
                                         <li><a href="job.php">Career</a></li>
                                         <li><a href="AKTECH Profile 2022.pdf" target="_blank">Company profile</a></li>
@@ -79,4 +79,4 @@
                     </div>
                 </div>
             </div>
-        </header>
+  </header>

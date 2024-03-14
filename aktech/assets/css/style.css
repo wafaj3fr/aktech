@@ -271,7 +271,7 @@ header {
 .saf_header_wrapper {
     background: var(--main-bg-color);
     padding: 0;
-    position: relative;
+    /* position: relative; */
     display: inline-block;
     width: 100%;
 }
@@ -461,8 +461,6 @@ header {
 }
 
 .saf_banner_button>div {
-    /* background: rgba(255, 255, 255, 0.10); */
-    /* color: var(--main-bg-color); */
     width: 100px;
     height: 60px;
     position: absolute;
@@ -477,7 +475,6 @@ header {
 
 .saf_banner_button>div:before {
     content: "";
-    /* background: var(--main-bg-color); */
     width: 3px;
     height: 28px;
     position: absolute;
@@ -499,8 +496,6 @@ header {
     width: 0;
     height: 0;
     border-top: 0 solid transparent;
-    /* border-left: 20px solid rgba(255, 255, 255, 0.10); */
-    /* border-bottom: 60px solid transparent; */
 }
 
 .ButtonNext:after {
@@ -634,18 +629,35 @@ header {
     height: 90px;
 }
 
-.saf_partners_container:hover img {
-    filter: grayscale(0%);
+.saf_partners_container-d {
+    height: 300px; /* Adjust the container height accordingly */
+    width: 100%;
+    overflow: hidden; /* Ensure that the overflow doesn't disrupt the layout */
+    
 }
 
-.saf_partners_container:hover img,
-.saf_partners_container:hover,
+
+
+.saf_partners_container:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1); /* Increase the scale on hover to make the images larger */
+}
+
+.saf_partners_container-d:hover {
+    overflow-x: scroll; /* Enable horizontal scrolling on hover */
+}
+
+.saf_partners_container-d::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+.saf_partners_container-d img{
+    height: 150px; /* Set the height of the images */
+    width: 150px; /* Set the width of the images */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
 .saf_partners_container img,
-.saf_partners_container {
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
+.saf_partners_container-d {
     transition: all 0.5s;
 }
 
@@ -776,10 +788,12 @@ header {
     transition: all 0.5s;
 }
 
-.w3-content {
+/* .w3-content {
+    margin-top: 15px;
+    position: relative;
     display: flex;
     justify-content: center;
-}
+} */
 
 .w3-button {
     background-color: transparent;
@@ -790,6 +804,11 @@ header {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.w3-button:hover{
+    background-color: white;
 }
 
 /********************************************************
@@ -798,19 +817,16 @@ header {
 
 .saf_services_wrapper1 {
     padding: 72px 0 50px;
-    /* background: var(--main-bg-color); */
     background-image: url(pastedimage.png);
 
 }
 
 .saf_services_wrapper {
     padding: 72px 0 50px;
-    background: var(--main-bg-color);
 }
 .saf_services_wrapperServices {
   height: 100%; 
   background: none;
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -818,36 +834,11 @@ header {
 
 .saf_services_sectionBg {
     content: "";
-    /* background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; */
 }
 
 .saf_services_sectionBg a {
     color: var(--main-txt-color);
-    /* background-image: url(aboutbaner.png); */
-
 }
-
-/* .saf_services_sectionBg.service2 {
-    background-image: url(https://via.placeholder.com/370x328);
-}
-
-.saf_services_sectionBg.service3 {
-    background-image: url(https://via.placeholder.com/370x328);
-}
-
-.saf_services_sectionBg.service4 {
-    background-image: url(https://via.placeholder.com/370x328);
-}
-
-.saf_services_sectionBg.service5 {
-    background-image: url(https://via.placeholder.com/370x328);
-}
-
-.saf_services_sectionBg.service6 {
-    background-image: url(https://via.placeholder.com/370x328);
-} */
 
 .saf_services_section {
     background-color: var(--main-bg-color);
@@ -1408,6 +1399,12 @@ header {
     display: inline-block;
     width: 100%;
 }
+.saf_pricing_wrapper p,
+.saf_pricing_wrapper li{
+    text-align: left;
+    margin: auto 45px;
+}
+
 .saf_pricing_wrapper1 {
     padding: 72px 0 41px;
     /* background: var(--main-off-white); */
@@ -1598,21 +1595,17 @@ header {
 }
 
 
-.saf_blog_info li {
+.saf_blog_info .info_item {
     display: inline-block;
-    margin-left: 14px;
+    margin-right: 10px;
+    padding: 10px;
 }
 
-.saf_blog_info li:first-child {
-    margin-left: 0;
-}
-
-.blog_text {
-    padding: 30px 30px 0;
-}
 
 .saf_blog_info {
     margin-bottom: 11px;
+    list-style: none;
+    padding: 0;
 }
 
 .saf_blog_info li:first-child img {
@@ -1626,10 +1619,6 @@ header {
     vertical-align: text-top;
 }
 
-.saf_blog_info a {
-    color: var(--main-gray-version14);
-}
-
 .saf_blog_title {
     font-size: 22px;
     font-weight: 500;
@@ -1641,7 +1630,7 @@ header {
 }
 
 .saf_blog_thumb {
-    background: var(--main-bg-color);
+    /* background: var(--main-bg-color); */
     margin-bottom: 30px;
     padding-bottom: 21px;
 }
@@ -2029,7 +2018,13 @@ ion-icon{
     font-size: 12px;
     margin-right: 5px
 }
-  
+
+/* .container {
+    width: calc(100% - 30px);
+    padding-right: 20px;
+} */
+
+
 .ser-card:hover ul {
     -webkit-line-clamp: unset;
     /* No further changes needed for hover effect */
@@ -2070,8 +2065,83 @@ ion-icon{
     color: white;
   }
 
+
+  /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+  .project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamic number of columns based on available width */
+    grid-gap: 20px; /* Spacing between projects */
+    padding: 20px;
+  }
+  
+  .project-list li {
+    padding: 10px;
+    border-radius: 5px;
+    list-style: none; /* Remove default bullet */
+    text-align: center; /* Center project name */
+    /* background-color: #f0f0f0; */
+    /* border: 1px solid #ccc; */
+  }
+  
+  .project-list li:not(:last-child) {
+    margin-bottom: 10px; /* Add margin between list items */
+  }
+
+
+  .projects .container{
+    margin: 0;
+    padding: 0;
+  }
+  .project-container {
+    width: 80%;
+    margin: 10px; /* Center align the table */
+    white-space: nowrap;
+
+  }
+  
+  .project-table {
+    width: 100%;
+    border-collapse: collapse; /* Collapse border spacing */
+  }
+  
+  .project-table th,
+  .project-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* text-align: center; */
+    /* background-color: #f0f0f0; */
+  }
+  
+  .project-table th {
+    background-color: #1961ac; /* Background color for table headers */
+    color: white;
+  }
+
+
   .projects {
-    margin: 15px;
+    overflow-x: auto;
+  }
+
+
+
+    
+
+  /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  
+  
+  
+  
+
+  .image-holder {
+    width: 100px; /* Adjust width as needed */
+    height: 350px; /* Adjust height as needed */
+    object-fit: cover; /* Scales image to fill container (with overflow hidden) */
+  }
+  
+  .image-holder img {
+    width: 100%; /* Image scales to fill container width */
+    height: 100%; /* Image scales to fill container height */
   }
 
   .projects .ser-card{
@@ -2079,10 +2149,24 @@ ion-icon{
     margin-bottom: 20px;
   }
 
-  .projects p,
-  .projects h4{
-    padding: 0 10px;
+  .d-flex{
+    padding: 50px 20px;
+    /* background-color: #1960ace5;
+    color: white; */
+    border-radius: 5px;
+    /* border: 1px solid black; */
+  justify-content: center; /* Horizontally centers content */
+  align-items: center; /* Vertically centers content */
   }
+
+  .d-flex img{
+    border-radius: 5px;
+  }
+
+  .project-details{
+    font-size: 20px;
+  }
+ 
 
   .container-fluid {
     background-image: url("blob-scene-haikei.svg");
@@ -2097,6 +2181,8 @@ ion-icon{
   }
 
 /* ========================================= */
+
+
 
 .page_title h2 {
     float: left;
@@ -2175,6 +2261,10 @@ ion-icon{
     width: 48%;
     margin-bottom: 22px;
     margin: auto;
+}
+
+.saf_blog_thumb p{
+    margin-bottom: 20px;
 }
 
 .saf_sidebar_search input[type="text"] {
@@ -2293,6 +2383,13 @@ a.ed_btn.ed_orange:hover {
     color: #898d94;
     padding: 8px 0px;
 }
+
+.saf_blog_thumb.details{
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 .saf_single_blog_text1 h5 {
     font-size: 18px;
@@ -2904,23 +3001,48 @@ textarea.saf_form_field {
         /* Optional: Add styles for hover effects, background colors, etc. */
       }
 
-      #featured-projects {
-        /* Style the carousel container here */
+      /* #featured-projects {
+        display: flex;
+        justify-content: center;
       }
+
+      #featured-projects img{
+        width: 70%;
+      } */
       
-      .carousel-inner {
-        /* Style the inner container for slides here */
-      }
+      #featured-projects-carousel {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center; /* Center the carousel horizontally */
+    }
+
+    #featured-projects-carousel .carousel-item {
+        flex: 0 0 auto; /* Ensure carousel items don't grow or shrink */
+    }
+    
+    #featured-projects-carousel .carousel-item img {
+        max-width: 50%; /* Ensure images don't exceed their container width */
+        height: 300px;
+        object-fit: cover;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: auto; /* Set the width to auto */
+        top: 50%; /* Align buttons vertically to the middle */
+        transform: translateY(-50%);
+    }
+    
+    .carousel-control-prev {
+        left: 0; /* Adjust position of the left button */
+    }
+    
+    .carousel-control-next {
+        right: 0; /* Adjust position of the right button */
+    }
+    
       
-      .carousel-item {
-        /* Style individual project slides here */
-      }
-      
-      .carousel-item img {
-        /* Style the project images here */
-        width: 100%; /* Adjust width as needed */
-        height: auto; /* Maintain aspect ratio */
-      }
 
 /********************************************************
 19. Responsive CSS Start
@@ -2948,6 +3070,9 @@ textarea.saf_form_field {
     .thumbPrev {
         left: -80px;
     }
+    .carousel-control-next{
+        left: 460px;
+      }
 }
 
 @media (min-width: 992px) {
@@ -3021,6 +3146,9 @@ textarea.saf_form_field {
     .saf_blog_info li {
         margin-left: 5px;
     }
+    .carousel-control-next{
+        left: 460px;
+      }
 }
 
 @media (max-width: 991.98px) {
@@ -3165,7 +3293,55 @@ textarea.saf_form_field {
     }
 }
 
+@media (min-width: 768px) and (max-width: 1024px){
+    .carousel-control-next{
+        left: 270px;
+      }
+      
+
+}
+
+@media (max-width: 667px){
+    .project-container {
+        overflow-x: auto;
+        display: flex;
+        justify-content: center;
+        margin-left: 16px;
+      }
+}
+
 @media (max-width: 767.98px) {
+    
+    .carousel-control-next{
+        left: 310px;
+      }
+ 
+      .project-container {
+        overflow-x: auto;
+      }
+    .d-flex {
+        padding: 50px 20px;
+        /* background-color: #1960ace5;
+        color: white; */
+        border-radius: 5px;
+        /* border: 1px solid black; */
+        justify-content: center; /* Horizontally centers content (optional) */
+        align-items: center; /* Vertically centers content (optional) */
+        flex-direction: column; /* Stacks content vertically */
+      }
+      
+      .image-holder {
+        margin: 0 auto; 
+        width: 75%; /* Adjust width for mobile */
+        height: 200px; /* Adjust height for mobile */
+      }
+      
+      .projects .ser-card {
+        height: 250px; /* Adjust height for mobile */
+        display: flex;
+        align-items: center;
+      }
+
     .saf_about_wrapper .row {
         flex-direction: column-reverse;
     }

@@ -282,14 +282,7 @@
                 </div>
             </div>
         </section>
-        <!-- Call To Action Section -->
-        
-        <!-- Testimonial Section -->
-        
-        <!-- Pricing Section -->
-       
-        <!-- Blog Start -->
-        
+
     </div>
    <?php
    include("footer.php");

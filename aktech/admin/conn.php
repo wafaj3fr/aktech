@@ -2,10 +2,10 @@
  <?php
 
  // include("config.php");
- $servername = "localhost:3306";
- $username = "aktehaua_aktehaua";
+ $servername = "localhost";
+ $username = "root";
  $password = "";
- $dbname = "aktehaua_aktech1";
+ $dbname = "aktech1";
  // Create connection
  $conn = new mysqli($servername, $username, $password ,$dbname );
  // Check connection

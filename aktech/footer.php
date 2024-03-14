@@ -5,7 +5,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 mb_30">
                         <div class="saf_widgets saf_footer_about">
                             <img class="footer_logo" src="assets/images/index/footer_logo.png" alt="" />
-                            <p>Consectetur adipiscing elttid do eiuid tempor incididunt ut labereore maeet dolore magna aliqua. Qweeuis ium suspen edisse ultrices.</p>
+                            <p>With a proven track record of delivering successful EPC projects, we are your trusted partner in navigating the complexities of the oil and gas sector, from concept to completion.</p>
                             <div class="saf_address_wrap">
                                 <h4>Get Jobs Notifications</h4>
                                 <div class="saf_newsLetter_wrap">

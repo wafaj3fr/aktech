@@ -64,40 +64,34 @@
       ?>
         <!-- Banner Wraapper -->
         <!--==========Header Banner Start==============-->
-        <div class="saf_pagetitle">
-            <div class="saf_img_overlay"></div>
-            <div class="container">
+        <section class="saf_about_wrapper">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="page_title">
-                            <h2>Apply Job</h2>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="saf_about_detail wow fadeInRight">
+                            <h1 class="text-center mt-5 display-3 fw-bold"><span>Job application</span></h1>
                         </div>
                     </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <ul class="breadcrumb">
-                            <li><a href="index.html">home</a></li>
-                            <li>//</li>
-                            <li><a href="about.html">Apply</a></li>
-                        </ul>
-                    </div>
                 </div>
-            </div>
-        </div>
+              </div>
+        </section>
         <!--========Header Banner End===============-->
         <!--========Contact Start===============-->
         <div class="saf_contact_wrapper">
             <div class="container">
                 <div class="row">
-                <?PhP
+                <?php
                             $id = $_GET["applyid"];
                             $sqlproject = "SELECT * FROM `job` WHERE `id` = '$id'";
 
                             $prodect_project=$conn->query($sqlproject);
                             $row_project = $prodect_project->fetch_assoc();
                         ?>
+
+
                     <div class="col-lg-12 col-md-6 col-sm-12 col-12">
                         <div class="saf_contact_form wow fadeInRight" data-wow-duration="1s">
-                            <h4 class="saf_sub_heading relative">Application Form</h4>
+                            
                             <form action=""  method="post" enctype="multipart/form-data">
                                 <b><?php echo $row_project["name"];?></b> &nbsp;&nbsp;&nbsp;&nbsp; / &nbsp;&nbsp;&nbsp;&nbsp;
                                 <b></span> <?php echo $row_project["experience"];?> Years Experience </b>
@@ -114,7 +108,7 @@
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                                         <div class="saf_field_holder">
-                                            <input type="text" class="saf_form_field " placeholder="Enter Your Phone" name="phone" id="email" data-valid="email" data-error="Email should be valid.">
+                                            <input type="text" class="saf_form_field " placeholder="Enter Your Phone" name="phone" id="phone" data-valid="phone" data-error="Phone should be valid.">
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-6 col-sm-12 col-12">
@@ -148,21 +142,6 @@
                             <?php
                             if(isset($_POST['applyjob']))
                             {
-                                // $target_dir = "uploadsCV/";
-                                // $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-                                // $uploadOk = 1;
-                                // $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-                                // // Check if image file is a actual image or fake image
-                                // if(isset($_POST["submit"])) {
-                                // $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-                                // if($check !== false) {
-                                //     echo "File is an image - " . $check["mime"] . ".";
-                                //     $uploadOk = 1;
-                                // } else {
-                                //     echo "File is not an image.";
-                                //     $uploadOk = 0;
-                                // }
-                                // }
                                 $target_dir = "uploadsCV/";
                                 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
                                 $uploadOk = 1;
